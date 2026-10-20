@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-app="naif-drift-lens-shadow-v1-1-2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080d15">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none';">
+<meta name="description" content="NAIF Drift Lens — a local, unsigned, deterministic synthetic MCP contract demonstration. Not a purchase or remotely verified delivery.">
+<title>NAIF Drift Lens — Offline Concept · SHADOW</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080d15'/%3E%3Cpath d='M13 18h38M19 32h33M13 46h38' stroke='%23ecc49a' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#080d15;--surface:#111a26;--surface2:#151f2b;--border:#324153;--muted:#a4adbb;--text:#f6efe7;--warm:#eac298;--softwarm:#f5d9bd;--error:#e99583;--success:#a8d9b4;--unknown:#b6bece;--radius:18px;--focus:#fff0d4}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:radial-gradient(ellipse at 55% 2%,#162338 0,transparent 33%),linear-gradient(180deg,#080d15,#0b111b 46%,#080d15);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}button,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:disabled{opacity:.46;cursor:not-allowed;transform:none!important}::selection{color:#171310;background:#f5cc9e}a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.shell{width:min(1240px,calc(100% - 80px));margin-inline:auto}.mono,.tiny-mono{font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;direction:ltr;unicode-bidi:isolate}.skip-link{position:fixed;inset-inline-start:18px;top:-100px;background:var(--warm);color:#141111;border-radius:8px;padding:10px 16px;z-index:100}.skip-link:focus{top:10px}
+.topline{display:flex;justify-content:center;align-items:center;gap:10px;min-height:35px;padding:5px 20px;border-bottom:1px solid #24303e;color:#e6c8a8;background:#1a1d23;font-size:11px;letter-spacing:.07em}.topline-dot{width:6px;height:6px;border-radius:50%;background:#e4b880;box-shadow:0 0 9px #f7c18866}.topline-right{margin-inline-start:24px;color:#948b83;direction:ltr;font-family:ui-monospace,monospace;font-size:10px}.site-header{position:relative;z-index:4;border-bottom:1px solid #202c3b;background:#090f18d9;backdrop-filter:blur(16px)}.nav{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{display:inline-flex;align-items:center;gap:12px;flex-shrink:0}.brand-mark{width:38px;height:38px;color:var(--warm)}.brand-wordmark{display:flex;flex-direction:column;line-height:1.16}.brand-wordmark strong{direction:ltr;font-size:19px;letter-spacing:-.045em}.brand-wordmark strong span{font-weight:500}.brand-wordmark small{direction:ltr;font-family:ui-monospace,monospace;font-size:8.8px;letter-spacing:.19em;color:#d2b58e;margin-top:7px}.nav-links{display:flex;align-items:center;gap:35px;margin-inline-start:auto}.nav-links a{font-size:12px;font-weight:650;color:#c8cdd5;white-space:nowrap}.nav-links a:hover{color:var(--warm)}.lang-toggle{width:74px;min-height:41px;padding:8px;border:1px solid #516071;background:#162231;color:var(--warm);border-radius:9px;display:flex;justify-content:center;align-items:center;gap:9px;font-family:ui-monospace,monospace;font-weight:750}.lang-toggle svg{width:19px;height:19px}
+.hero{position:relative;display:grid;grid-template-columns:1.03fr .97fr;gap:42px;align-items:center;padding-block:100px 92px}.hero-copy{min-width:0}.eyebrow{display:flex;gap:10px;align-items:center;color:#ddb58d;font-weight:700;font-size:12px;letter-spacing:.1em}.eyebrow-line{width:23px;height:2px;background:#ddae7b}.hero h1{font-size:clamp(3.45rem,6.3vw,6.4rem);line-height:1.09;letter-spacing:-.065em;margin:30px 0 26px;font-weight:780;max-width:720px}.hero h1 span{display:block}.hero h1 .accent{color:var(--warm)}.hero-lead{max-width:580px;font-size:1.12rem;color:#c8d0da;line-height:1.9;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-block:35px}.btn{border:1px solid transparent;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:48px;padding:12px 19px;font-size:13px;font-weight:800;transition:background .18s,border-color .18s,transform .18s}.btn:hover:not(:disabled){transform:translateY(-2px)}.btn-primary{background:var(--warm);color:#211609;box-shadow:0 10px 38px #f3b96e18}.btn-primary:hover{background:#f5d4af}.btn-outline{border-color:#6c6a66;background:#172331;color:#f4dac1}.btn-outline:hover{border-color:var(--warm);background:#223041}.btn-quiet{border-color:#46566a;background:#14212f;color:#e4e8eb}.btn-quiet:hover{border-color:#e6b98c}.hero-facts{display:flex;gap:26px;flex-wrap:wrap;padding-top:24px;margin-top:18px;border-top:1px solid #283544;align-items:center}.hero-facts>div{display:flex;flex-direction:column;gap:2px;border-inline-end:1px solid #334358;padding-inline-end:25px}.hero-facts>div:last-child{border-inline-end:none}.hero-facts b{direction:ltr;font-family:ui-monospace,monospace;font-size:22px;letter-spacing:-.04em;color:#f2d4ae}.hero-facts span{color:#acb8c7;font-size:11px}
+.hero-art{border:1px solid #5b554b;background:linear-gradient(160deg,#161f2a,#0e1822 60%,#101824);border-radius:21px;min-width:0;position:relative;overflow:hidden;box-shadow:0 30px 92px #0009,0 0 90px #c08e4820}.hero-art:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,#cda47b,transparent)}.art-top,.art-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:19px 23px;color:#c3a98a;font-size:10px;letter-spacing:.07em;border-bottom:1px solid #394251}.art-top{direction:ltr}.art-bottom{font-size:11px;letter-spacing:0;border-bottom:none;border-top:1px solid #394251;color:#bfc8d2}.art-indicator{display:flex;align-items:center;gap:9px;font-size:11px;color:#addec4}.art-indicator i{width:6px;height:6px;border-radius:50%;background:#adddb7}.diagram-wrap{position:relative;background:radial-gradient(ellipse at 50% 52%,#263b49 0%,#111923 65%);overflow:hidden;min-height:380px;display:flex;align-items:center;justify-content:center}.diagram-wrap:before{content:"";position:absolute;width:60%;height:60%;border-radius:50%;background:#b6926a14;filter:blur(52px);pointer-events:none}.signature-diagram{width:100%;height:auto;max-height:410px;display:block;direction:ltr}.signature-diagram text{direction:ltr;unicode-bidi:isolate}.signature-diagram .rung{transition:transform .65s cubic-bezier(.17,.65,.35,1)}.diagram-wrap[data-state="fail"] .rung-amount{transform:translateX(24px)}.diagram-wrap[data-state="fail"] .rung-currency{transform:translateX(-16px)}.diagram-wrap[data-state="fail"] .rung-error-fill{opacity:.65}.diagram-wrap[data-state="divergent"] .rung-amount{transform:translateX(18px)}.diagram-wrap[data-state="divergent"] .rung-currency{transform:translateX(-9px)}.diagram-wrap[data-state="divergent"] .rung-error-fill{opacity:.5}.diagram-wrap[data-state="pass"] .rung-amount,.diagram-wrap[data-state="pass"] .rung-currency{transform:translateX(0)}.diagram-wrap[data-state="pass"] .rung-error-fill{opacity:0}.diagram-wrap[data-state="idle"] .rung-amount{transform:translateX(12px)}.diagram-wrap[data-state="idle"] .rung-currency{transform:translateX(-5px)}.corner-index{position:absolute;bottom:14px;left:20px;direction:ltr;font-family:ui-monospace,monospace;color:#bac3cc;font-size:10px;letter-spacing:.05em}.corner-index span:first-child{color:var(--warm)}.art-live{white-space:nowrap;font-size:9px}
+.divider-mark{display:flex;align-items:center;justify-content:center;gap:25px;color:#bc9870;font-size:9px;letter-spacing:.24em;direction:ltr;padding-bottom:64px}.divider-mark:before,.divider-mark:after{content:"";height:1px;width:100%;background:linear-gradient(90deg,transparent,#585146)}.divider-mark:after{background:linear-gradient(90deg,#585146,transparent)}.divider-mark span:first-child,.divider-mark span:last-child{font-size:7px}
+.section-intro{display:flex;justify-content:space-between;gap:22px;align-items:end;margin-bottom:27px}.section-intro>p{max-width:430px;color:#b9c4cf;margin:0 0 6px;font-size:14px;line-height:1.9}.section-tag{font-family:ui-monospace,monospace;font-size:11px;font-weight:700;letter-spacing:.13em;color:#d4a678;margin:0 0 13px}.section-intro h2{font-size:clamp(2rem,3.9vw,3.5rem);line-height:1.22;letter-spacing:-.043em;margin:0}.lab-shell{padding-bottom:120px}.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.workbench-card,.results-card{border:1px solid #3e4d5d;border-radius:17px;background:linear-gradient(180deg,#121e2a,#101923);padding:29px;min-width:0}.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.card-count{font-family:ui-monospace,monospace;letter-spacing:.13em;color:#d6b58b;font-size:11px;font-weight:650;direction:ltr}.card-icon{display:flex;align-items:center;justify-content:center;border:1px solid #5d534c;width:36px;height:36px;border-radius:9px;color:var(--warm)}.card-icon svg{width:21px;height:21px}.workbench-card h3,.results-card h3{font-size:25px;letter-spacing:-.035em;margin:0 0 6px}.card-desc{font-size:12.5px;line-height:1.75;color:#b3becc;margin:0 0 22px}.schema-pane{border:1px solid #414c58;border-radius:11px;background:#0b131d;overflow:hidden;margin-bottom:24px}.pane-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid #354355;color:#d0af84;font-size:10px;letter-spacing:.08em;font-family:ui-monospace,monospace}.pane-title .dot{width:6px;height:6px;background:#bd9f76;border-radius:50%}.schema-pane pre{font-size:11px;color:#d1d9e1;white-space:pre-wrap;line-height:2.1;margin:0;padding:13px 16px;font-family:ui-monospace,Menlo,Consolas,monospace;overflow-wrap:anywhere}.preset-group{padding:0;margin:0;border:0;min-width:0}.preset-group legend,.payload-label{font-size:12px;font-weight:740;color:#eee7df;margin:0 0 12px}.presets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:21px}.preset{min-height:46px;padding:7px 12px;display:flex;align-items:center;gap:10px;text-align:start;color:#d5dde6;background:#1b2835;border:1px solid #3c4e61;border-radius:8px;font-size:11.5px}.preset.active,.preset[aria-pressed="true"]{border-color:var(--warm);background:#362c2a;color:#f8dab9}.preset-num{font:10px ui-monospace,monospace;color:#d6ae7e;flex-shrink:0}.payload-label{display:flex;align-items:center;justify-content:space-between;gap:10px}.payload-label #byteLabel{font-size:10px;font-weight:500;color:#aebccd;direction:ltr}.workbench-card textarea{display:block;width:100%;max-width:100%;min-height:148px;resize:vertical;background:#09121c;border:1px solid #546778;border-radius:10px;padding:17px;color:#e8d5c2;font:13px/1.75 ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;tab-size:2}.workbench-card textarea:focus{border-color:var(--warm)}.input-warning{display:flex;align-items:flex-start;gap:9px;color:#d5b9a0;font-size:11px;margin:12px 0 18px;line-height:1.6}.input-warning svg{width:16px;height:16px;flex-shrink:0}.input-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.input-actions .run-button{flex:1}.clear-btn{border:0;background:none;color:#c5d0dc;padding:12px;min-height:44px;font-size:12px}.clear-btn:hover{text-decoration:underline}.helper-status{font-size:11px;color:#adbfcd;margin-top:17px;min-height:18px}
+.results-card{background:linear-gradient(170deg,#16202c,#0e1721)}.results-header{display:flex;justify-content:space-between;align-items:start;gap:12px}.results-header>div{min-width:0}.results-header .card-desc{max-width:310px}.result-overall{display:inline-flex;justify-content:center;align-items:center;border:1px solid #687589;padding:5px 8px;border-radius:6px;color:#cbd4dc;font:10px ui-monospace,monospace;direction:ltr;white-space:nowrap;letter-spacing:.06em}.result-overall[data-verdict="FAIL"]{color:#ffc1af;border-color:#bd675d;background:#4e2c30}.result-overall[data-verdict="PASS"]{color:#c6f1c7;border-color:#679f83;background:#1d403a}.result-overall[data-verdict="DIVERGENT"]{color:#ffe1ad;border-color:#ab8350;background:#443827}.result-overall[data-verdict="UNKNOWN"]{color:#d5deef;border-color:#8896a5;background:#253343}.micro-head,.detail-head,.receipt-head{display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:11px;font-weight:730;color:#dfcfbd;margin:4px 0 14px}.tiny-mono{font-size:9px;color:#9aa5b0;letter-spacing:.08em}.policy-list{border:1px solid #425265;border-radius:12px;overflow:hidden}.policy-row{width:100%;display:flex;align-items:center;gap:12px;text-align:start;min-height:67px;padding:11px 16px;background:#121e2a;border:0;border-bottom:1px solid #334252;color:#e3eaf1}.policy-row:last-child{border-bottom:0}.policy-row:hover{background:#192736}.policy-row.selected{box-shadow:inset 3px 0 0 var(--warm);background:#202a33}.policy-name{display:flex;flex-direction:column;flex:1;min-width:0}.policy-name b{font-size:13px}.policy-name small{font:9px/1.7 ui-monospace,monospace;color:#9facbd;direction:ltr;unicode-bidi:isolate;align-self:flex-start;white-space:nowrap}.policy-status{display:inline-flex;justify-content:center;min-width:72px;font:11px ui-monospace,monospace;direction:ltr;color:#d4dae1}.policy-status[data-verdict="FAIL"]{color:#ffae9d}.policy-status[data-verdict="PASS"]{color:#abe3b8}.policy-status[data-verdict="UNKNOWN"]{color:#b5c4d7}.policy-chevron{color:var(--warm)}.policy-detail{margin-top:16px;min-height:130px;border:1px solid #38485a;border-radius:11px;background:#0d1722;padding:14px 16px}.detail-head{margin-top:0;margin-bottom:9px}.issue-list{display:grid;gap:6px}.issue-item{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;font-size:11.5px;color:#cfdae4;line-height:1.55}.issue-bullet{border:1px solid #af786d;color:#ffc4b9;border-radius:4px;padding:1px 4px;font:10px ui-monospace,monospace;direction:ltr}.issue-item.good .issue-bullet{border-color:#7aa989;color:#b4dfc1}.issue-item.note .issue-bullet{border-color:#bc9669;color:#f8d0a2}.issue-item .field{color:#fff0dc;font-family:ui-monospace,monospace;direction:ltr;unicode-bidi:isolate;display:inline-block}.issue-list .empty{color:#a2b1be;font-size:12px;margin:6px 0}.remote-row{display:flex;align-items:center;gap:13px;border:1px dashed #758391;border-radius:12px;margin-top:17px;padding:15px 12px;background:#192330}.unknown-icon{display:grid;place-items:center;flex-shrink:0;width:28px;height:28px;font-weight:900;color:#d8dce4;border:1px dashed #abb5bd}.remote-row>div:nth-child(2){display:flex;flex-direction:column;flex:1;min-width:0}.remote-row strong{font-size:12px}.remote-row span{font-size:11px;line-height:1.5;color:#bac7d2}.remote-row b{font:10px ui-monospace,monospace;direction:ltr;color:#e0e5ea}.receipt-panel{margin-top:20px;border-top:1px solid #3c4855;padding-top:20px}.receipt-head{margin:0 0 10px}.hash{background:#080f18;border:1px solid #3a4e62;color:#e6c29d;padding:12px 11px;border-radius:8px;overflow-wrap:anywhere;font:11px/1.8 ui-monospace,monospace;min-height:45px}.receipt-actions{margin-top:14px}.confirm-export{display:flex;align-items:flex-start;gap:10px;font-size:11px;color:#c6d1dc}.confirm-export input{accent-color:#d6a979;width:17px;height:17px;flex:0 0 auto}.export-buttons{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}.export-buttons .btn{flex:1}.copy-button{border:1px solid #506074;background:#1a2a38;border-radius:8px;min-height:44px;padding:9px 13px;color:#dfe6ed;font-size:12px;font-weight:700}.disclaimer{font-size:10.8px;color:#b8c3ce;line-height:1.6;margin:16px 0 0}
+.story{padding-bottom:140px}.story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.story-card{padding:31px 27px;border:1px solid #344455;border-radius:14px;background:#101a26;min-width:0}.story-count{font:10px ui-monospace,monospace;letter-spacing:.1em;color:var(--warm);direction:ltr}.story-symbol{display:block;width:150px;max-width:100%;height:95px;margin:35px 0 24px}.story-card h3{font-size:19px;margin:0 0 9px}.story-card p{font-size:12px;color:#adbac9;line-height:1.8;margin:0}.limits{border-top:1px solid #38495c;padding-block:85px 100px}.limits-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.limits-grid h2{font-size:clamp(2.2rem,4vw,3.6rem);letter-spacing:-.04em;line-height:1.25;margin:0 0 22px;max-width:580px}.limits-lead{font-size:13px;color:#c2cbd6;line-height:1.9;max-width:450px}.boundary-list{display:grid;gap:10px}.boundary-list>div{display:flex;gap:14px;align-items:center;padding:14px;border:1px solid #425166;background:#15202c;border-radius:9px;color:#cfdae5;font-size:12px}.boundary-mark{display:grid;place-items:center;flex:0 0 auto;border-radius:6px;width:28px;height:28px;font-weight:900}.boundary-mark.known{color:#b5dfbe;background:#244338}.boundary-mark.unknown{color:#ddd6cf;background:#3c373c}.footer{border-top:1px solid #354353;padding-block:30px 44px}.footer-line,.footer-micro{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-line{font-size:12px;color:#b9c7d2}.footer-brand{font-family:ui-monospace,monospace;color:#f2d1ae;font-weight:700;letter-spacing:.04em;direction:ltr}.footer-brand span{color:#8c9bab}.footer-micro{font:9px ui-monospace,monospace;color:#798793;letter-spacing:.06em;direction:ltr;margin-top:20px}
+html[dir="ltr"] .brand-wordmark strong{letter-spacing:-.04em}html[dir="ltr"] .hero h1{font-size:clamp(3.6rem,6vw,6.15rem)}html[dir="ltr"] .hero-lead{max-width:640px}html[dir="ltr"] .policy-row.selected{box-shadow:inset 3px 0 0 var(--warm)}
+@media(max-width:1100px){.shell{width:min(100% - 48px,1240px)}.hero{gap:25px;padding-block:74px}.hero h1{font-size:clamp(3.2rem,6vw,5rem)}.nav-links{gap:20px}.workbench-card,.results-card{padding:21px}}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:34px}.hero h1{max-width:760px}.hero-art{max-width:700px;width:100%}.lab-grid,.limits-grid{grid-template-columns:1fr}.section-intro{align-items:start}.nav-links{gap:15px}.lab-shell{padding-bottom:100px}.story{padding-bottom:95px}}
+@media(max-width:630px){.shell{width:calc(100% - 32px)}.topline{justify-content:flex-start;min-height:37px;font-size:9px;padding-inline:12px}.topline-right{margin-inline-start:auto;font-size:8px;white-space:nowrap}.nav{min-height:72px;gap:10px}.brand{gap:8px}.brand-mark{width:31px;height:31px}.brand-wordmark strong{font-size:16px}.brand-wordmark small{font-size:7px;letter-spacing:.12em}.nav-links{display:none}.lang-toggle{width:59px;min-height:44px}.hero{padding-block:54px 50px}.eyebrow{font-size:10px}.hero h1,html[dir="ltr"] .hero h1{font-size:clamp(2.55rem,10.8vw,4.1rem);line-height:1.16;margin:21px 0 22px}.hero-lead{font-size:.96rem}.hero-actions{gap:9px;margin-block:25px}.hero-actions .btn{flex:1;padding:12px;min-height:48px;font-size:11px;gap:7px}.hero-facts{gap:14px;margin-top:4px}.hero-facts>div{padding-inline-end:14px;gap:2px}.hero-facts b{font-size:18px}.hero-facts span{font-size:9px}.hero-art{border-radius:14px}.art-top,.art-bottom{padding:13px 12px;font-size:9px}.art-top .mono{font-size:8px}.diagram-wrap{min-height:245px}.diagram-watermark{font-size:11px}.corner-index{bottom:10px;font-size:9px}.art-live{font-size:7.5px}.divider-mark{padding-bottom:48px;gap:9px;letter-spacing:.08em}.divider-mark .mono{font-size:7px}.section-intro{flex-direction:column;gap:12px}.section-intro h2{font-size:clamp(1.95rem,8vw,3rem)}.section-intro>p{font-size:12px}.lab-grid{gap:13px}.workbench-card,.results-card{padding:17px;border-radius:12px}.workbench-card h3,.results-card h3{font-size:22px}.presets{gap:7px}.preset{font-size:10.5px;min-height:45px;padding:6px 8px}.schema-pane pre{font-size:10px;padding:13px 11px}.workbench-card textarea{font-size:12px;min-height:128px}.input-actions .run-button{flex:1 1 100%}.input-actions .btn-quiet{flex:1}.results-header{flex-wrap:wrap}.policy-row{padding:9px 11px}.policy-status{min-width:60px;font-size:9px}.remote-row{flex-wrap:wrap}.remote-row>b{margin-inline-start:auto}.story-grid{grid-template-columns:1fr}.story-card{padding:23px}.story-symbol{margin:14px 0 12px;height:72px}.limits{padding-block:66px}.footer-line,.footer-micro{align-items:start;flex-direction:column;gap:10px}.story{padding-bottom:90px}}
+@media(max-width:360px){.shell{width:calc(100% - 24px)}.topline-right{display:none}.hero-actions .btn{flex:1 1 100%}.hero-facts{gap:7px}.hero-facts>div{padding-inline-end:9px}.hero-facts span{font-size:8px}.policy-name small{font-size:8px}.workbench-card,.results-card{padding:13px}.section-intro h2{font-size:1.9rem}.corner-index{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.signature-diagram .rung{transition:none!important}}
+@media(forced-colors:active){.btn,.policy-row,.preset{border:1px solid ButtonText}.result-overall,.policy-status{border:1px solid ButtonText}}
+
+
+/* V1.1: inspectable decision path, local policy only. No hidden animation requirement. */
+.trace-panel{border:1px solid #756146;background:linear-gradient(145deg,#192431,#101923);border-radius:13px;padding:18px 16px;margin-top:17px;overflow:hidden}
+.trace-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.trace-overline{font:700 9px/1.5 ui-monospace,monospace;letter-spacing:.09em;color:#deb98d}
+.trace-heading h4{font-size:1.04rem;line-height:1.35;color:#f6e7d6;letter-spacing:-.02em;margin:5px 0 12px}
+.trace-simulation{font:700 9px/1.4 ui-monospace,monospace;direction:ltr;color:#c9d7e3;border:1px solid #65768a;border-radius:5px;padding:5px 7px}
+.trace-steps{list-style:none;padding:0;margin:1px 0 0;display:grid;gap:3px;counter-reset:trace}
+.trace-step{display:grid;grid-template-columns:23px minmax(0,1fr);align-items:start;gap:10px;min-height:52px;animation:trace-step-in .33s ease-out both}
+.trace-step:nth-child(2){animation-delay:.07s}.trace-step:nth-child(3){animation-delay:.14s}.trace-step:nth-child(4){animation-delay:.21s}.trace-step:nth-child(5){animation-delay:.28s}
+.trace-marker{display:grid;place-items:center;width:22px;height:22px;margin-top:6px;border:1px solid #bb9571;border-radius:5px;color:#ffdbac;font:800 12px ui-monospace,monospace;background:#3d3029}
+.trace-step:not(:last-child) .trace-marker:after{content:'';width:1px;height:26px;background:#5b6674;position:absolute;transform:translateY(27px)}
+.trace-step-body{display:flex;flex-direction:column;gap:4px;padding:6px 0 12px;border-bottom:1px solid rgba(151,168,188,.12);min-width:0}
+.trace-step:last-child .trace-step-body{border-bottom:0}
+.trace-step-body strong{font-size:11px;color:#f6eadb;overflow-wrap:anywhere;letter-spacing:.01em}
+.trace-step-body span{font:11px/1.65 ui-monospace,monospace;color:#c7d4df;direction:auto;unicode-bidi:plaintext;overflow-wrap:anywhere}
+.trace-step.trace-fail .trace-marker{background:#4f2c2b;border-color:#bf7464;color:#ffccbd}
+.trace-step.trace-pass .trace-marker{background:#224838;border-color:#73a18d;color:#d0f4de}
+.trace-step.trace-unknown .trace-marker{border-style:dashed;background:repeating-linear-gradient(45deg,#202d38,#202d38 4px,#31404c 4px,#31404c 7px)}
+.trace-privacy,.trace-footnote{font-size:10.5px;color:#bcc9d5;line-height:1.6;border-top:1px solid #455467;padding-top:10px;margin:9px 0 0}
+.trace-empty{font-size:11px;color:#bfcbd7;line-height:1.6;padding:11px 0}
+@keyframes trace-step-in{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.trace-step{animation:none!important}}
+@media(max-width:600px){.trace-panel{padding:14px 11px}.trace-heading h4{font-size:.98rem}}
+
+/* Keep the keyboard ring inside the policy list's clipping boundary. */
+.policy-row:focus-visible{outline-offset:-4px}
+/* Prevent iOS Safari from auto-zooming custom JSON text area when focused. */
+@media(max-width:600px){.workbench-card textarea{font-size:16px;line-height:1.65}.trace-step-body strong,.trace-step-body span{font-size:12px}}
+
+</style>
+
+<style id="naif-device-qa-css">
+/* Independent local QA layer: additive, no modification to payment or demo logic. */
+.device-gate{margin:64px auto 90px;scroll-margin-top:90px;border:1px solid #7e6851;background:linear-gradient(140deg,#162334,#0e1723);border-radius:17px;padding:clamp(18px,3vw,34px);max-width:1190px}
+.device-flag{display:inline-flex;border:1px solid #a98b6b;color:#f4d7b6;font:700 11px ui-monospace,monospace;padding:5px 9px;border-radius:6px;letter-spacing:.06em}
+.device-gate h2{color:#f9f0e2;font-size:clamp(24px,4vw,36px);line-height:1.25;letter-spacing:-.035em;margin:13px 0}
+.device-gate p{color:#cbd5df;font-size:14px;line-height:1.8;margin:8px 0 16px}
+.device-rows{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:17px}
+.device-panel{min-width:0;padding:20px;border-radius:12px;background:#101b2a;border:1px solid #42566c}
+.device-panel h3{margin:0 0 14px;color:#ecd9c2;font-size:18px}
+.device-checks{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
+.device-check{display:flex;align-items:start;justify-content:space-between;gap:12px;border-bottom:1px solid #344b60;padding:8px 1px;font-size:12px;color:#d6dfec}
+.device-check span:first-child{min-width:0;overflow-wrap:anywhere}.device-check b{font:700 11px ui-monospace,monospace;white-space:nowrap}
+.device-check b[data-kind="pass"]{color:#a1e7b4}.device-check b[data-kind="fail"]{color:#ffc2b9}.device-check b[data-kind="note"]{color:#e3c4a0}
+.device-qa-status{display:block;font:700 13px ui-monospace,monospace;border:1px solid #5c6c80;border-radius:8px;background:#1b2b3c;color:#f6dbc1;padding:14px;margin:14px 0;line-height:1.6}
+.device-manual{display:grid;gap:11px;margin-top:12px}.device-manual label{display:flex;gap:10px;align-items:start;padding:9px;border:1px solid #40536a;border-radius:9px;color:#e4e9f0;font-size:13px;line-height:1.6}
+.device-manual input{accent-color:#eac298;flex:none;margin-top:4px;width:18px;height:18px}
+.device-gate button{border:1px solid #aa8c69;border-radius:10px;min-height:46px;padding:11px 14px;cursor:pointer;font:750 14px system-ui;background:#eac298;color:#231a15;transition:background .15s}
+.device-gate button:hover{background:#f6d9b6}.device-gate button:disabled{opacity:.48;cursor:not-allowed}
+.device-gate .device-subtle{background:#233344;color:#f2deca;border-color:#5f778d}
+.device-gate .device-subtle:hover{background:#30465d;color:#f2deca}
+.device-gate button:focus-visible,.device-gate a:focus-visible,.device-gate input:focus-visible{outline:3px solid #fff1d6;outline-offset:3px}
+.device-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.device-hint{font-size:11px!important;color:#acbcd0!important}
+.device-gate .device-a{display:inline-flex;align-items:center;min-height:44px;color:#ffe0b2;text-decoration:underline;text-underline-offset:3px}
+.device-banner{display:flex;gap:14px;align-items:center;padding:12px 18px;background:#2b2728;border-block:1px solid #705942;font-size:12px;line-height:1.6;color:#f6d5a6}
+.device-banner a{color:#fff1d9;text-decoration:underline;min-height:44px;display:inline-flex;align-items:center}
+html[lang="ar"] .qa-en,html[lang="en"] .qa-ar{display:none!important}
+@media(max-width:720px){.device-rows{grid-template-columns:1fr}.device-gate{margin:44px auto 60px;padding:18px 13px}.device-panel{padding:17px 13px}.device-banner{display:block}.device-banner a{margin-inline-start:12px}}
+@media(prefers-reduced-motion:reduce){.device-gate button{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#workbench" data-i18n="skip">انتقل إلى التجربة</a>
+<div class="topline" role="note"><span class="topline-dot"></span><span data-i18n="top">مختبر تجريبي خاص · بدون اتصال أو دفع أو تنفيذ خارجي</span><span class="topline-right">SHADOW / 01</span></div>
+<header class="site-header" id="home">
+  <nav class="nav shell" aria-label="Main navigation">
+    <a class="brand" href="#home">
+      <svg class="brand-mark" aria-hidden="true" viewBox="0 0 48 48" fill="none"><path d="M8 12H40M14 24H45M8 36H40" stroke="currentColor" stroke-width="5.1" stroke-linecap="square"/><path d="M8 24H13" stroke="#E7A672" stroke-width="5.1"/></svg>
+      <span class="brand-wordmark"><strong>NAIF<span> Gravity</span></strong><small>DRIFT LENS / LAB 001</small></span>
+    </a>
+    <div class="nav-links" role="navigation" aria-label="Sections">
+      <a href="#workbench" data-i18n="navLab">المختبر</a>
+      <a href="#method" data-i18n="navMethod">المنهج</a>
+      <a href="#boundaries" data-i18n="navLimits">الحدود</a>
+    </div>
+    <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch interface language"><span id="langToggleText">EN</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 4 1 4m0 0c2 5 5 8 9 10M3 8h14M12 4v4c0 6-3 10-8 13M14 14c1.6-3.3 3.5-6.6 5-10 .8 4 1.4 6.7 3 10m-6-4h5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></button>
+  </nav>
+</header>
+<div class="device-banner" role="note"><span class="qa-ar">فحص الآيفون المباشر متاح في هذه النسخة. النتيجة لا تعني اعتماد النشر.</span><span class="qa-en">Run device checks in this browser. Passing does not authorize launch.</span> <a href="#device-gate"><span class="qa-ar">افحص هذا الجهاز ↓</span><span class="qa-en">Test this device ↓</span></a></div>
+
+<main>
+<section class="hero shell" aria-labelledby="heroTitle">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">الفصل الأول / عندما يختلف الوكيل مع العقد</span></div>
+    <h1 id="heroTitle"><span data-i18n="heroA">الخلل لا يُرى.</span><span class="accent" data-i18n="heroB">حتى نجعله مرئيًا.</span></h1>
+    <p class="hero-lead" data-i18n="lead">شاهد استدعاء أداة MCP يصطدم بقواعد عقده، ثم قارن ثلاثة سلوكيات تحقق محلية. هنا لا نحول الاحتمالات إلى وعود.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#workbench"><span data-i18n="primaryCta">شغّل التجربة</span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="btn btn-outline" href="#method"><span data-i18n="secondaryCta">افهم كيف نتحقق</span><span aria-hidden="true">⌁</span></a>
+    </div>
+    <div class="hero-facts"><div><b>100%</b><span data-i18n="factOne">محلي في المتصفح</span></div><div><b>03</b><span data-i18n="factTwo">سياسات افتراضية معلنة</span></div><div><b>UNKNOWN</b><span data-i18n="factThree">نتيجة النظام البعيد</span></div></div>
+  </div>
+  <div class="hero-art" role="group" aria-label="Visual demonstration of shifted contract steps">
+    <div class="art-top"><span class="mono">NAIF / DRIFT VISUAL ENGINE</span><span class="art-indicator"><i></i><span data-i18n="simulation">محاكاة</span></span></div>
+    <div class="diagram-wrap" id="diagram" data-state="idle">
+      <svg class="signature-diagram" viewBox="0 0 550 400" role="img" aria-labelledby="diagramTitle diagramDesc">
+        <title id="diagramTitle">Drift Lens visual: aligned and misaligned contract rails</title>
+        <desc id="diagramDesc">Three bars represent amount, currency and unknown remote effects; misalignment shows violations while hatching shows unknown.</desc>
+        <defs>
+          <linearGradient id="metal" x1="0" x2="1"><stop offset="0%" stop-color="#72513c"/><stop offset="37%" stop-color="#ebbd89"/><stop offset="75%" stop-color="#b98958"/><stop offset="100%" stop-color="#f1d1ac"/></linearGradient>
+          <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(42)"><rect width="9" height="9" fill="#29323e"/><path d="M0 0V9" stroke="#a1acb7" stroke-width="2"/></pattern>
+          <filter id="copperGlow"><feGaussianBlur stdDeviation="5"/></filter>
+        </defs>
+        <g fill="none" stroke="#607080" stroke-width="1" opacity=".3">
+          <path d="M45 54 H505 M45 347 H505 M54 45V362 M494 45V362"/>
+          <path d="M54 92H494 M54 167H494 M54 242H494 M54 317H494" stroke-dasharray="3 7"/>
+          <path d="M96 45V362 M456 45V362" stroke-dasharray="2 10"/>
+        </g>
+        <g stroke="#d5b590" fill="none" opacity=".35"><rect x="104" y="95" width="330" height="24" rx="4"/><rect x="104" y="170" width="330" height="24" rx="4"/><rect x="104" y="245" width="330" height="24" rx="4"/></g>
+        <g class="rung rung-amount"><rect x="104" y="95" width="330" height="24" rx="4" fill="url(#metal)"/><rect x="104" y="95" width="330" height="24" rx="4" fill="#ff826b" class="rung-error-fill" opacity="0"/></g>
+        <g class="rung rung-currency"><rect x="104" y="170" width="330" height="24" rx="4" fill="url(#metal)"/><rect x="104" y="170" width="330" height="24" rx="4" fill="#ff826b" class="rung-error-fill" opacity="0"/></g>
+        <g class="rung rung-remote"><rect x="104" y="245" width="330" height="24" rx="4" fill="url(#hatch)" stroke="#98a9b9" stroke-width="1.5"/></g>
+        <g font-size="11.2" letter-spacing="2.3" fill="#d5bd9e" font-family="ui-monospace,monospace" text-anchor="start"><text x="104" y="77">01 / AMOUNT</text><text x="104" y="152">02 / CURRENCY</text><text x="104" y="228">03 / REMOTE EFFECT</text></g>
+        <text class="diagram-watermark" x="270" y="365" text-anchor="middle" fill="#9b8d7c" opacity=".47" letter-spacing="7" font-size="13" font-family="ui-monospace,monospace">CONTRACT / CALL / UNKNOWN</text>
+        <g class="rail-ticks" stroke="#dfaa6f"><path d="M66 97V121 M62 109H83M463 97V121M467 109H487" stroke-width="1.6"/></g>
+      </svg>
+      <div class="corner-index">Fig. 001 <span>/</span> <span id="figureState">IDLE</span></div>
+    </div>
+    <div class="art-bottom"><span data-i18n="diagramCaption">هندسة الانحراف، لا رسم بياني لمبيعات وهمية.</span><span class="mono art-live" id="artState">AWAITING INPUT</span></div>
+  </div>
+</section>
+
+<div class="divider-mark shell"><span>◆</span><span class="mono">LAB 001 / DETERMINISTIC LOCAL SIMULATION</span><span>◆</span></div>
+
+<section class="lab-shell shell" id="workbench" aria-labelledby="labTitle">
+  <div class="section-intro">
+    <div><p class="section-tag" data-i18n="labTag">المختبر التفاعلي</p><h2 id="labTitle" data-i18n="labHeading">جرّب الفشل. اختبر الإصلاح.</h2></div>
+    <p data-i18n="labIntro">اختر حالة اصطناعية، ثم شاهد ما تقبله السياسات الثلاث وما ترفضه. لا اتصال بخادم أو محفظة.</p>
+  </div>
+  <div class="lab-grid">
+    <div class="workbench-card" role="region" aria-labelledby="inputHeading">
+      <div class="card-head"><span class="card-count">01 / INPUT</span><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 4-5 8 5 8m8-16 5 8-5 8m-3-17-2 18"/></svg></span></div>
+      <h3 id="inputHeading" data-i18n="inputHeading">الاستدعاء مقابل العقد</h3>
+      <p class="card-desc" data-i18n="inputIntro">عقد تجريبي ثابت: create_invoice. لا يصل هذا النص إلى أي جهة.</p>
+      <div class="schema-pane" dir="ltr"><div class="pane-title"><span>SCHEMA / create_invoice</span><span class="dot"></span></div><pre id="schemaCode">amount_cents : integer [1..999999999] · required
+currency     : "USD"             · required
+memo         : string ≤32         · optional
+extra fields : forbidden</pre></div>
+      <fieldset class="preset-group"><legend data-i18n="chooseExample">اختر حالة تجريبية</legend>
+        <div class="presets" id="presets">
+          <button type="button" class="preset active" data-preset="mismatch" aria-pressed="true"><span class="preset-num">01</span><span data-i18n="preset1">حقل مفقود</span></button>
+          <button type="button" class="preset" data-preset="policy" aria-pressed="false"><span class="preset-num">02</span><span data-i18n="preset2">اختلاف السياسات</span></button>
+          <button type="button" class="preset" data-preset="corrected" aria-pressed="false"><span class="preset-num">03</span><span data-i18n="preset3">استدعاء صحيح</span></button>
+          <button type="button" class="preset" data-preset="duplicates" aria-pressed="false"><span class="preset-num">04</span><span data-i18n="preset4">مفتاح مكرر</span></button>
+        </div>
+      </fieldset>
+      <label for="payload" class="payload-label"><span data-i18n="editInput">المدخل (يمكن تعديله)</span><span id="byteLabel" class="mono">0 / 4096 BYTES</span></label>
+      <textarea id="payload" rows="6" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-describedby="payloadTip">{"amount":"9.00","currency":"usd"}</textarea>
+      <p id="payloadTip" class="input-warning"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 21h20L12 3Zm0 7v5m0 3v.2" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg><span data-i18n="inputWarning">استخدم بيانات اصطناعية فقط. لا تضف مفاتيح أو بيانات عميل.</span></p>
+      <div class="input-actions"><button type="button" class="btn btn-primary run-button" id="runBtn"><span data-i18n="run">تحليل الاستدعاء</span><span aria-hidden="true">↗</span></button><button type="button" class="btn btn-quiet" id="fixBtn" data-i18n="fix">تحميل الإصلاح الاصطناعي</button><button type="button" class="clear-btn" id="clearBtn" data-i18n="clear">مسح</button></div>
+      <div class="helper-status" role="status" aria-live="polite" id="formStatus"><span data-i18n="ready">جاهز للتشغيل محليًا.</span></div>
+    </div>
+    <div class="results-card" role="region" id="results" aria-labelledby="resultsHeading">
+      <div class="card-head"><span class="card-count">02 / OBSERVATION</span><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M4 6h16M6 18h12M9 3l-2 18"/></svg></span></div>
+      <div class="results-header"><div><h3 id="resultsHeading" data-i18n="resultsTitle">موضع الانحراف</h3><p class="card-desc" data-i18n="resultsIntro">ثلاث سياسات افتراضية معلنة، ليست قواعد خادم فعلي.</p></div><span class="result-overall" data-verdict="idle" id="localVerdict">NOT RUN</span></div>
+      <div class="micro-head"><span data-i18n="policyLabel">سياسات التحقق المحلية</span><span class="tiny-mono">SIMULATED / 03</span></div>
+      <div class="policy-list" id="policyList" role="group" aria-label="Local policy evaluations">
+        <button class="policy-row selected" data-policy="strict" type="button" aria-pressed="true"><span class="policy-name"><b data-i18n="strict">صارم</b><small>01 / STRICT</small></span><span class="policy-status" data-verdict="idle" id="policy-strict">—</span><span class="policy-chevron">↗</span></button>
+        <button class="policy-row" data-policy="coerce" type="button" aria-pressed="false"><span class="policy-name"><b data-i18n="coerce">تحويل الأعداد</b><small>02 / COERCE NUMERIC</small></span><span class="policy-status" data-verdict="idle" id="policy-coerce">—</span><span class="policy-chevron">↗</span></button>
+        <button class="policy-row" data-policy="permissive" type="button" aria-pressed="false"><span class="policy-name"><b data-i18n="permissive">تحويل + تجاهل الزيادات</b><small>03 / PERMISSIVE</small></span><span class="policy-status" data-verdict="idle" id="policy-permissive">—</span><span class="policy-chevron">↗</span></button>
+      </div>
+      <div class="policy-detail"><div class="detail-head"><span data-i18n="detailLabel">قواعد ونتيجة السياسة المختارة</span><span class="tiny-mono" id="detailPolicy">STRICT</span></div><div id="issues" aria-live="polite" aria-atomic="true" class="issue-list"><p class="empty" data-i18n="notRunYet">شغّل التحليل لعرض أسباب النجاح أو الفشل هنا.</p></div></div>
+      <section id="tracePanel" class="trace-panel" aria-labelledby="traceHeading">
+        <div class="trace-heading"><div><span class="trace-overline" data-i18n="traceOverline">مسار القرار · سياسة واحدة</span><h4 id="traceHeading" data-i18n="traceTitle">شاهد أين تتغير القواعد.</h4></div><span class="trace-simulation">LOCAL ONLY</span></div>
+        <ol class="trace-steps" id="traceSteps"><li class="trace-empty" data-i18n="traceIdle">ابدأ التحليل لرؤية السبب خطوة بخطوة.</li></ol>
+        <p class="trace-footnote" data-i18n="tracePrivacy">تُعرض قيم الأمثلة الاصطناعية فقط. المدخلات المعدّلة لا تظهر قيمها في هذا المسار.</p>
+      </section>
+      <div class="remote-row" role="note"><div class="unknown-icon">?</div><div><strong data-i18n="remoteTitle">أثر الخادم الحقيقي</strong><span data-i18n="remoteDesc">لم يُستدعَ خادم MCP. لا نعرف إن كان سيقبل أو ينفّذ الطلب.</span></div><b>UNKNOWN</b></div>
+      <div class="receipt-panel"><div class="receipt-head"><span data-i18n="receiptTitle">ملخص الاختبار المحلي (غير موقّع)</span><span class="tiny-mono">SHA-256 ≠ SIGNATURE</span></div><div class="hash" dir="ltr" id="hashValue">— NO LOCAL REPORT YET —</div><div class="receipt-actions"><label class="confirm-export"><input id="syntheticConfirm" type="checkbox"><span data-i18n="confirmExport">أؤكد أن المدخل اصطناعي ولا يحتوي أسرارًا.</span></label><div class="export-buttons"><button type="button" class="btn btn-outline" id="downloadBtn" disabled><span data-i18n="download">تنزيل التقرير</span><span aria-hidden="true">↓</span></button><button type="button" class="copy-button" id="copyBtn" disabled data-i18n="copy">نسخ البصمة</button></div></div><p class="disclaimer" data-i18n="unsigned">ملخص قواعد محلي. لا يُعد إثبات تسليم، وقد تتطابق بصمة ملخصين لمدخلين مختلفين.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story shell" id="method" aria-labelledby="methodTitle"><div class="section-intro"><div><p class="section-tag" data-i18n="methodTag">ثلاث لحظات قابلة للفهم</p><h2 id="methodTitle" data-i18n="methodTitle">ليس سحرًا. قواعد يمكن اختبارها.</h2></div><p data-i18n="methodIntro">نحاول جعل الخطأ مقروءًا بصريًا، بينما تبقى الحدود غير القابلة للإثبات واضحة.</p></div>
+  <div class="story-grid">
+    <article class="story-card"><span class="story-count">01 / CONTRACT</span><svg aria-hidden="true" class="story-symbol" viewBox="0 0 170 90"><path d="M16 20H156M16 44H156M16 68H156" stroke="#D5B084" stroke-width="10"/></svg><h3 data-i18n="stepOneTitle">عقد معلن</h3><p data-i18n="stepOneDesc">الحقل المطلوب، النوع، القيمة المسموحة، وحدود السياسة كلها أمامك.</p></article>
+    <article class="story-card"><span class="story-count">02 / CONFLICT</span><svg aria-hidden="true" class="story-symbol" viewBox="0 0 170 90"><path d="M16 20H156 M32 44H169 M16 68H156" stroke="#E68B70" stroke-width="10"/><path d="M16 44H156" stroke="#E68B70" stroke-width="1.5" stroke-dasharray="4 4" opacity=".4"/></svg><h3 data-i18n="stepTwoTitle">فشل واضح</h3><p data-i18n="stepTwoDesc">درجة منزاحة مع سبب نصي: حقل مفقود أو نوع غير مطابق أو سياسة مختلفة.</p></article>
+    <article class="story-card"><span class="story-count">03 / LIMITS</span><svg aria-hidden="true" class="story-symbol" viewBox="0 0 170 90"><path d="M16 20H156 M16 44H156" stroke="#D5B084" stroke-width="10"/><path d="M16 68H156" stroke="#9FA9B5" stroke-width="10" stroke-dasharray="6 4"/></svg><h3 data-i18n="stepThreeTitle">تفسير بلا مبالغة</h3><p data-i18n="stepThreeDesc">قد تنجح المحاكاة محليًا؛ التنفيذ عند الطرف الآخر يبقى UNKNOWN.</p></article>
+  </div>
+</section>
+
+<section class="limits shell" id="boundaries" aria-labelledby="limitsTitle"><div class="limits-grid"><div><p class="section-tag" data-i18n="limitsTag">حدود الثقة</p><h2 id="limitsTitle" data-i18n="limitsTitle">ما نعرفه. وما لا ندّعي معرفته.</h2><p class="limits-lead" data-i18n="limitsLead">هذه تجربة تصميم وتفسير أخطاء، وليست منتجًا مباعًا أو مختبر أمان معتمدًا.</p></div><div class="boundary-list"><div><span class="boundary-mark known">✓</span><span data-i18n="knownOne">نتائج القواعد المضمّنة قابلة للتشغيل مرة أخرى.</span></div><div><span class="boundary-mark known">✓</span><span data-i18n="knownTwo">التجربة تعمل دون خادم أو حساب أو محفظة.</span></div><div><span class="boundary-mark unknown">?</span><span data-i18n="unknownOne">لم يتم التحقق من تنفيذ خادم MCP أو التسوية المالية.</span></div><div><span class="boundary-mark unknown">?</span><span data-i18n="unknownTwo">بصمة SHA-256 ليست توقيعًا ولا دليل ملكية.</span></div></div></div></section>
+
+<section class="device-gate shell" id="device-gate" aria-labelledby="deviceTitle">
+  <span class="device-flag">ON-DEVICE QA / SHADOW ONLY</span>
+  <h2 id="deviceTitle"><span class="qa-ar">افحص Drift Lens في متصفح هذا الجهاز</span><span class="qa-en">Test Drift Lens in this browser</span></h2>
+  <p><span class="qa-ar">الفحص يعمل على <strong>هذا المتصفح</strong> باستخدام أمثلة تركيبية فقط. لا يرسل نتائج ولا يجري دفعًا. التشغيل على Mac WebKit ليس بديلًا عن Safari على آيفون فعلي.</span><span class="qa-en">Checks execute on <strong>this browser</strong> with built-in synthetic samples only. No data is sent, no payment is made. Mac WebKit is not a substitute for real iPhone Safari.</span></p>
+  <div class="device-rows">
+    <div class="device-panel">
+      <h3><span class="qa-ar">١. الفحوص الآلية المحلية</span><span class="qa-en">1. Local automated checks</span></h3>
+      <div class="device-actions"><button id="deviceRun" type="button"><span class="qa-ar">تشغيل الفحوص</span><span class="qa-en">Run on-device checks</span></button><a class="device-a" href="#workbench"><span class="qa-ar">الذهاب للتجربة</span><span class="qa-en">Open workbench</span></a></div>
+      <output id="deviceStatus" role="status" aria-live="polite" class="device-qa-status"><span class="qa-ar">لم يبدأ الفحص بعد</span><span class="qa-en">Not yet tested</span></output>
+      <ol id="deviceResults" class="device-checks" aria-label="On-device test results"><li class="device-check"><span>—</span><b data-kind="note">NOT RUN</b></li></ol>
+    </div>
+    <div class="device-panel">
+      <h3><span class="qa-ar">٢. ما لا تستطيع الشيفرة إثباته</span><span class="qa-en">2. Manual device evidence</span></h3>
+      <p class="device-hint"><span class="qa-ar">ضع علامة فقط على ما أنجزته بنفسك على جهاز فعلي، وليس محاكيًا.</span><span class="qa-en">Check only what you personally completed on a physical device, not a simulator.</span></p>
+      <div class="device-manual">
+        <label><input id="qaPhysical" type="checkbox"><span class="qa-ar">فتحت هذه الصفحة داخل Safari على آيفون فعلي وتحققت من ذلك</span><span class="qa-en">Opened this page in Safari on a real iPhone</span></label>
+        <label><input id="qaVoiceOver" type="checkbox"><span class="qa-ar">شغلت VoiceOver ونقلت التركيز بين العقد والنتائج والأزرار دون عائق</span><span class="qa-en">Tested VoiceOver focus and reading order across the contract, results and buttons</span></label>
+        <label><input id="qaDownload" type="checkbox"><span class="qa-ar">نزّلت تقرير المثال الاصطناعي وتحققت من وجوده في الملفات</span><span class="qa-en">Downloaded a synthetic report and confirmed it exists in Files</span></label>
+        <label><input id="qaRotation" type="checkbox"><span class="qa-ar">جربت الوضعين العمودي والأفقي دون تمرير أفقي غير مقصود</span><span class="qa-en">Tested both portrait and landscape without accidental horizontal overflow</span></label>
+      </div>
+      <p class="device-hint"><span class="qa-ar">حتى لو نجحت الفحوص، يبقى اختبار خمسة مطورين مستقلين ومراجعة النشر مطلوبين.</span><span class="qa-en">Even if all checks pass, five independent developers and a release review are still required.</span></p>
+      <div class="device-actions"><button id="deviceExport" class="device-subtle" type="button" disabled><span class="qa-ar">تنزيل تقرير الفحص المحلي</span><span class="qa-en">Export local QA report</span></button></div>
+    </div>
+  </div>
+  <p class="device-hint"><span class="qa-ar">التقرير يحتوي أسماء الاختبارات ونتائجها ومقاس العرض فقط، دون نص JSON الذي كتبته أو عنوان IP أو معرّفات الجهاز. جميع النتائج اليدوية تبدأ غير مُجتازة إلى أن تؤكدها بنفسك.</span><span class="qa-en">The exported report contains test names, verdicts and viewport size only, never your edited JSON, IP or device identifiers. Manual checks start unverified.</span></p>
+</section>
+</main>
+<footer class="footer shell"><div class="footer-line"><span class="footer-brand">NAIF GRAVITY <span>/</span> DRIFT LENS</span><span data-i18n="footerNote">نموذج Shadow مستقل · لم يُنشر على المتجر</span></div><div class="footer-micro"><span>DESIGN CONCEPT / 2026</span><span>NO CHECKOUT · NO EXTERNAL CALLS · NO TRACKERS</span></div></footer>
+<script>
+/* NAIF Drift Lens — deterministic, browser-only synthetic policy demonstration.
+   Copyright 2026 NAIF Gravity prototype. Not a payment, signature or delivery system.
+   Self-contained, no external dependencies, no network calls. */
+(function (root, factory) {
+  const core = factory();
+  if (typeof module === 'object' && module.exports) module.exports = core;
+  root.NAIFDrift = core;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const VERSION = 'drift-lens-shadow-1.1.2';
+  const CONTRACT = Object.freeze({
+    id: 'create_invoice', version: '1.0-demo',
+    description: 'Synthetic MCP tool input schema — not a live service',
+    fields: [
+      { name:'amount_cents', type:'integer', required:true, min:1, max:999999999 },
+      { name:'currency', type:'string', required:true, enum:['USD'] },
+      { name:'memo', type:'string', required:false, maxLength:32 }
+    ], additionalProperties:false
+  });
+  const PRESETS = Object.freeze({
+    mismatch: Object.freeze({ label:'Field mismatch', text:'{"amount":"9.00","currency":"usd"}', note:'Wrong field name + lowercase currency' }),
+    policy: Object.freeze({ label:'Policy divergence', text:'{"amount_cents":"900","currency":"USD","debug":"local"}', note:'String integer and extra field' }),
+    corrected: Object.freeze({ label:'Corrected fixture', text:'{"amount_cents":900,"currency":"USD"}', note:'Matches declared local schema' }),
+    duplicates: Object.freeze({ label:'Duplicate-key trap', text:'{"amount_cents":900,"amount_cents":100,"currency":"USD"}', note:'Rejected to avoid silently losing a key' })
+  });
+  const POLICIES = Object.freeze([
+    { id:'strict', name:'strict', coerce:false, dropExtras:false },
+    { id:'coerce', name:'numeric_coercion_only', coerce:true, dropExtras:false },
+    { id:'permissive', name:'coercion_and_extra_drop', coerce:true, dropExtras:true }
+  ]);
+  const REMOTE = Object.freeze({ verdict:'UNKNOWN', reason:'No remote MCP server, payment gateway, or external effect has been observed.' });
+  const MAX_BYTES = 4096;
+  const encoder = typeof TextEncoder !== 'undefined' ? new TextEncoder() : null;
+  const byteCount = s => encoder ? encoder.encode(s).length : (typeof Buffer !== 'undefined' ? Buffer.byteLength(s, 'utf8') : s.length);
+  const has = (o,k) => Object.prototype.hasOwnProperty.call(o,k);
+  const makeIssue = (code,field,expected,observed) => ({ code, field, expected, observed });
+
+  // Structural token walk on already-valid JSON: unlike JSON.parse's reviver,
+  // this detects repeated names within the same object before they are erased.
+  function duplicateKeys(raw) {
+    let i=0,depth=0;
+    const duplicates=[];
+    function ws(){while(i<raw.length && /[ \t\n\r]/.test(raw[i]))i++}
+    function stringToken(){
+      const start=i;
+      if(raw[i] !== '"') throw Error('invalid string start');
+      i++;
+      while(i<raw.length){
+        if(raw[i]==='\\'){i+=2;continue}
+        if(raw[i++]==='"') return JSON.parse(raw.slice(start,i));
+      }
+      throw Error('unterminated string');
+    }
+    function value(){
+      ws();
+      if(++depth>60)throw Error('excessive nesting');
+      if(raw[i]==='{'){
+        i++;ws();const seen=new Set();
+        if(raw[i]==='}')i++;
+        else while(i<raw.length){
+          ws();const name=stringToken();ws();
+          if(seen.has(name))duplicates.push(name);else seen.add(name);
+          if(raw[i]!==':')throw Error('colon expected');i++;
+          value();ws();
+          if(raw[i]==='}'){i++;break}
+          if(raw[i]!==',')throw Error('comma expected');i++;
+        }
+      }else if(raw[i]==='['){
+        i++;ws();if(raw[i]===']')i++;
+        else while(i<raw.length){value();ws();if(raw[i]===']'){i++;break}if(raw[i]!==',')throw Error('comma expected');i++}
+      }else if(raw[i]==='"')stringToken();
+      else {let start=i;while(i<raw.length && !/[\s,\]}]/.test(raw[i]))i++;if(i===start)throw Error('unexpected token')}
+      depth--;
+    }
+    value();ws();if(i!==raw.length)throw Error('unexpected trailing characters');
+    return [...new Set(duplicates)];
+  }
+
+  function parseSample(raw) {
+    if(typeof raw!=='string')return {ok:false,code:'INPUT_NOT_TEXT'};
+    if(!raw.trim())return {ok:false,code:'EMPTY_INPUT'};
+    if(byteCount(raw)>MAX_BYTES)return {ok:false,code:'INPUT_TOO_LARGE'};
+    let val;
+    try{val=JSON.parse(raw)}catch{return {ok:false,code:'INVALID_JSON'}}
+    let duplicated;
+    try{duplicated=duplicateKeys(raw)}catch{return {ok:false,code:'JSON_SCAN_UNSUPPORTED'}}
+    if(duplicated.length)return {ok:false,code:'DUPLICATE_KEY',fields:duplicated};
+    if(val===null||typeof val!=='object'||Array.isArray(val))return {ok:false,code:'ROOT_MUST_BE_OBJECT'};
+    // JSON.parse may map huge JSON exponents to Infinity; reject rather than
+    // silently serializing them as null in a purportedly replayable report.
+    function hasNonfinite(obj,depth=0){
+      if(depth>60)return true;
+      if(typeof obj==='number')return !Number.isFinite(obj);
+      if(obj&&typeof obj==='object')return Object.keys(obj).some(k=>hasNonfinite(obj[k],depth+1));
+      return false;
+    }
+    if(hasNonfinite(val))return {ok:false,code:'NON_FINITE_NUMBER'};
+    return {ok:true,value:val};
+  }
+
+  // Entirely local named policies, *not* Ajv's real coerceTypes behavior or
+  // any remote server's processing rules.
+  function evaluate(raw,policyId='strict',opts={}) {
+    const p = POLICIES.find(x=>x.id===policyId);
+    if(!p)throw Error('Unknown simulation policy');
+    const knownContract=opts.schemaKnown!==false;
+    if(!knownContract)return {policy:policyId,verdict:'UNKNOWN',issues:[],actions:[],normalized:null,reason:'No supported contract supplied; evaluation withheld.'};
+    const parsed=parseSample(raw);
+    if(!parsed.ok)return {policy:policyId,verdict:'FAIL',issues:[makeIssue(parsed.code,parsed.fields?.join(', ')||'$','supported unique-key JSON object',parsed.code)],actions:[],normalized:null};
+    const source=parsed.value;
+    const normalized=Object.create(null);
+    for(const key of Object.keys(source))normalized[key]=source[key];
+    const issues=[],actions=[];
+    const fields=CONTRACT.fields;
+    for(const item of fields){
+      if(!has(normalized,item.name)){
+        if(item.required)issues.push(makeIssue('REQUIRED',item.name,'present','missing'));
+        continue;
+      }
+      let v=normalized[item.name];
+      if(item.type==='integer'){
+        if(!Number.isSafeInteger(v)){
+          const canCoerce=p.coerce && typeof v==='string' && /^(0|[1-9][0-9]{0,8})$/.test(v) && Number.isSafeInteger(Number(v));
+          if(canCoerce){const from=v;v=Number(v);normalized[item.name]=v;actions.push({code:'COERCED_DECIMAL_INTEGER',field:item.name,from,to:v})}
+          else issues.push(makeIssue('TYPE_INTEGER',item.name,'safe positive integer',typeof v==='string'?'string':typeof v));
+        }
+        if(Number.isSafeInteger(v)&&(v<item.min||v>item.max))issues.push(makeIssue('OUT_OF_RANGE',item.name,`${item.min}..${item.max}`,String(v)));
+      }else if(item.type==='string'){
+        if(typeof v!=='string'){issues.push(makeIssue('TYPE_STRING',item.name,'string',typeof v));continue}
+        if(item.enum&&!item.enum.includes(v))issues.push(makeIssue('ENUM',item.name,item.enum.join('|'),v));
+        if(item.maxLength && Array.from(v).length>item.maxLength)issues.push(makeIssue('MAX_LENGTH',item.name,`<=${item.maxLength} characters`,String(Array.from(v).length)));
+      }
+    }
+    const allowed=new Set(fields.map(x=>x.name));
+    for(const key of Object.keys(normalized).sort()){
+      if(!allowed.has(key)){
+        if(p.dropExtras){delete normalized[key];actions.push({code:'DROPPED_UNKNOWN_FIELD',field:key})}
+        else issues.push(makeIssue('ADDITIONAL_FIELD',key,'not accepted','present'));
+      }
+    }
+    return {policy:policyId,verdict:issues.length?'FAIL':'PASS',issues,actions,normalized};
+  }
+
+  function compare(raw,opts={}){
+    const policies=POLICIES.map(p=>evaluate(raw,p.id,opts));
+    const statuses=new Set(policies.map(p=>p.verdict));
+    const localVerdict=statuses.size===1 ? policies[0].verdict : 'DIVERGENT';
+    return {policies,localVerdict,remote:REMOTE};
+  }
+  // Deterministic sorted-key serialization for this constrained demo.
+  // It is NOT asserted to implement RFC 8785 / JCS.
+  function stableStringify(value){
+    if(value===null||typeof value!=='object')return JSON.stringify(value);
+    if(Array.isArray(value))return '['+value.map(stableStringify).join(',')+']';
+    return '{'+Object.keys(value).sort().filter(k=>value[k]!==undefined).map(k=>JSON.stringify(k)+':'+stableStringify(value[k])).join(',')+'}';
+  }
+  function buildReport(raw,opts={}){
+    const parsed=parseSample(raw);
+    const evals=compare(raw,opts);
+    const includeInput=opts.includeInput===true;
+    // Only trusted, byte-exact built-in synthetic presets may expose a source
+    // fingerprint by default. A hash of a tiny human-entered secret can be
+    // guessed offline; a raw input digest is not a privacy safeguard.
+    const fixtureId=typeof opts.fixtureId==='string'&&has(PRESETS,opts.fixtureId)&&
+      PRESETS[opts.fixtureId].text===raw ? opts.fixtureId : null;
+    const fieldsAllowed=new Set(CONTRACT.fields.map(x=>x.name));
+    const safeField=(name)=> name==='$'?'$':fieldsAllowed.has(name)?name:'[unrecognized field]';
+    const report={
+      version:VERSION,
+      report_kind:'LOCAL_SYNTHETIC_DEMO_NOT_DELIVERY',
+      schema:{id:CONTRACT.id,version:CONTRACT.version,known:opts.schemaKnown!==false},
+      rules:{strict:'No coercion; reject undeclared fields.',coerce:'Convert bounded unsigned decimal integer string for amount_cents; reject extra fields.',permissive:'Apply bounded integer conversion and discard undeclared fields.'},
+      fixture_id:fixtureId,
+      input_included:includeInput,
+      input:includeInput && parsed.ok?parsed.value:null,
+      input_source_text:includeInput?raw:null,
+      input_error:parsed.ok?null:{code:parsed.code,fields:includeInput?(parsed.fields||[]):(parsed.fields||[]).map(safeField)},
+      policies:evals.policies.map(p=>({
+        policy:p.policy,verdict:p.verdict,reason:p.reason||null,
+        // Do not export input-derived values by default; users may paste data
+        // despite the synthetic-only instructions. Visual result remains local.
+        issues:p.issues.map(v=>({...v,field:includeInput?v.field:safeField(v.field),observed:includeInput?v.observed:null})),
+        actions:p.actions.map(v=>includeInput?v:{code:v.code,field:safeField(v.field)}),
+        normalized:includeInput?p.normalized:null
+      })),
+      local_verdict:evals.localVerdict,
+      privacy_note:'Custom input values and input hash are omitted by default. A summary hash may match for different private inputs with identical rule outcomes. Do not rely on it as proof of input identity.',
+      remote_verdict:'UNKNOWN',
+      remote_reason:REMOTE.reason,
+      canonicalization:'NAIF sorted-key JSON v1; NOT RFC 8785 JCS',
+      signature:null,
+      disclaimer:'Offline synthetic simulation only. Unsigned. Not a customer delivery or remotely verified effect. No checkout or agent was contacted.'
+    };
+    return report;
+  }
+  // SHA-256 reference fallback for browser file previews without a secure origin.
+  // Same standardized digest as Web Crypto, NOT a signature. Tested against Node.
+  function sha256Bytes(bytes) {
+    const K = [
+      0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+      0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+      0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+      0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+      0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+      0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+      0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+      0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2
+    ];
+    const h=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+    const n=bytes.length, total=Math.ceil((n+9)/64)*64;
+    const msg=new Uint8Array(total);msg.set(bytes);msg[n]=0x80;
+    const bits=n*8;
+    const hi=Math.floor(bits/4294967296),lo=bits>>>0;
+    for(let z=0;z<4;z++){
+      msg[total-8+z]=(hi>>>(24-z*8))&255;
+      msg[total-4+z]=(lo>>>(24-z*8))&255;
+    }
+    const w=new Uint32Array(64);
+    const rr=(x,k)=>(x>>>k)|(x<<(32-k));
+    for(let offset=0;offset<total;offset+=64){
+      for(let j=0;j<16;j++){
+        const t=offset+j*4;
+        w[j]=((msg[t]<<24)|(msg[t+1]<<16)|(msg[t+2]<<8)|msg[t+3])>>>0;
+      }
+      for(let j=16;j<64;j++){
+        const x=w[j-15],y=w[j-2];
+        const s0=rr(x,7)^rr(x,18)^(x>>>3),s1=rr(y,17)^rr(y,19)^(y>>>10);
+        w[j]=(w[j-16]+s0+w[j-7]+s1)>>>0;
+      }
+      let [a,b,c,d,e,f,g,hh]=h;
+      for(let j=0;j<64;j++){
+        const S1=rr(e,6)^rr(e,11)^rr(e,25),ch=(e&f)^(~e&g);
+        const t1=(hh+S1+ch+K[j]+w[j])>>>0;
+        const S0=rr(a,2)^rr(a,13)^rr(a,22),maj=(a&b)^(a&c)^(b&c);
+        const t2=(S0+maj)>>>0;
+        hh=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+      }
+      const v=[a,b,c,d,e,f,g,hh];
+      for(let j=0;j<8;j++)h[j]=(h[j]+v[j])>>>0;
+    }
+    return h.map(v=>v.toString(16).padStart(8,'0')).join('');
+  }
+  async function sha256(text){
+    if(!encoder)throw Error('TextEncoder unavailable');
+    const payload=encoder.encode(text);
+    if(typeof crypto!=='undefined'&&crypto.subtle){
+      const sum=await crypto.subtle.digest('SHA-256',payload);
+      return Array.from(new Uint8Array(sum),b=>b.toString(16).padStart(2,'0')).join('');
+    }
+    return sha256Bytes(payload);
+  }
+  async function exportReport(raw,opts={}){
+    const report=buildReport(raw,opts);
+    report.input_sha256=(report.fixture_id||opts.includeInputHash===true||opts.includeInput===true)
+      ? await sha256(raw) : null;
+    const canonical=stableStringify(report);
+    const sum=await sha256(canonical);
+    return {...report,content_sha256:sum};
+  }
+  function containsPossibleSecret(raw){
+    return /(?:password|private[_-]?key|api[_-]?key|access[_-]?token|secret|authorization|bearer|sk-[A-Za-z0-9_-]{8,})/i.test(raw);
+  }
+  return Object.freeze({VERSION,CONTRACT,PRESETS,POLICIES,MAX_BYTES,parseSample,duplicateKeys,evaluate,compare,stableStringify,buildReport,sha256,exportReport,containsPossibleSecret,byteCount});
+});
+
+</script>
+<script>
+/* NAIF Drift Lens UI — V1 offline-only. No storage, cookies, analytics, fetch,
+   network calls, checkout, payments, remote tool execution or account actions. */
+(function(){
+'use strict';
+const D=window.NAIFDrift;
+if(!D){document.body.insertAdjacentText('afterbegin','Engine unavailable. Offline demo not running.');return}
+const translations={
+  ar:{
+    skip:'انتقل إلى التجربة',top:'مختبر تجريبي خاص · بدون اتصال أو دفع أو تنفيذ خارجي',navLab:'المختبر',navMethod:'المنهج',navLimits:'الحدود',eyebrow:'الفصل الأول / عندما يختلف الوكيل مع العقد',heroA:'الخلل لا يُرى.',heroB:'حتى نجعله مرئيًا.',lead:'شاهد استدعاء أداة MCP يصطدم بقواعد عقده، ثم قارن ثلاثة سلوكيات تحقق محلية. هنا لا نحول الاحتمالات إلى وعود.',primaryCta:'شغّل التجربة',secondaryCta:'افهم كيف نتحقق',factOne:'محلي في المتصفح',factTwo:'سياسات افتراضية معلنة',factThree:'نتيجة النظام البعيد',simulation:'محاكاة',diagramCaption:'هندسة الانحراف، لا رسم بياني لمبيعات وهمية.',labTag:'المختبر التفاعلي',labHeading:'جرّب الفشل. اختبر الإصلاح.',labIntro:'اختر حالة اصطناعية، ثم شاهد ما تقبله السياسات الثلاث وما ترفضه. لا اتصال بخادم أو محفظة.',inputHeading:'الاستدعاء مقابل العقد',inputIntro:'عقد تجريبي ثابت: create_invoice. لا يصل هذا النص إلى أي جهة.',chooseExample:'اختر حالة تجريبية',preset1:'حقل مفقود',preset2:'اختلاف السياسات',preset3:'استدعاء صحيح',preset4:'مفتاح مكرر',editInput:'المدخل (يمكن تعديله)',inputWarning:'استخدم بيانات اصطناعية فقط. لا تضف مفاتيح أو بيانات عميل.',run:'تحليل الاستدعاء',fix:'تحميل الإصلاح الاصطناعي',clear:'مسح',ready:'جاهز للتشغيل محليًا.',resultsTitle:'موضع الانحراف',resultsIntro:'ثلاث سياسات افتراضية معلنة، ليست قواعد خادم فعلي.',policyLabel:'سياسات التحقق المحلية',strict:'صارم',coerce:'تحويل الأعداد',permissive:'تحويل + تجاهل الزيادات',detailLabel:'قواعد ونتيجة السياسة المختارة',notRunYet:'شغّل التحليل لعرض أسباب النجاح أو الفشل هنا.',remoteTitle:'أثر الخادم الحقيقي',remoteDesc:'لم يُستدعَ خادم MCP. لا نعرف إن كان سيقبل أو ينفّذ الطلب.',receiptTitle:'ملخص الاختبار المحلي (غير موقّع)',traceOverline:'مسار القرار · سياسة واحدة',traceTitle:'شاهد أين تتغير القواعد.',traceIdle:'ابدأ التحليل لرؤية السبب خطوة بخطوة.',tracePrivacy:'تُعرض قيم الأمثلة الاصطناعية فقط. المدخلات المعدّلة لا تظهر قيمها في هذا المسار.',traceFailure:'قاعدة غير مطابقة',traceConversion:'تحويل قيمة',traceRemoval:'تجاهل حقل',traceFinal:'الحكم المحلي',traceNoAction:'لم تحدث تحولات ضمن هذه السياسة المحلية.',traceUnknown:'لا عقد مدعوم؛ الحكم غير معروف.',traceLocalOnly:'هذه نتيجة محلية فقط. أثر الخادم الحقيقي UNKNOWN.',confirmExport:'أؤكد أن المدخل اصطناعي ولا يحتوي أسرارًا.',download:'تنزيل التقرير',copy:'نسخ البصمة',unsigned:'ملخص محلي غير موقّع، وليس دليل تسليم. لا يتضمن نص المدخل الخام افتراضيًا.',methodTag:'ثلاث لحظات قابلة للفهم',methodTitle:'ليس سحرًا. قواعد يمكن اختبارها.',methodIntro:'نحاول جعل الخطأ مقروءًا بصريًا، بينما تبقى الحدود غير القابلة للإثبات واضحة.',stepOneTitle:'عقد معلن',stepOneDesc:'الحقل المطلوب، النوع، القيمة المسموحة، وحدود السياسة كلها أمامك.',stepTwoTitle:'فشل واضح',stepTwoDesc:'درجة منزاحة مع سبب نصي: حقل مفقود أو نوع غير مطابق أو سياسة مختلفة.',stepThreeTitle:'تفسير بلا مبالغة',stepThreeDesc:'قد تنجح المحاكاة محليًا؛ التنفيذ عند الطرف الآخر يبقى UNKNOWN.',limitsTag:'حدود الثقة',limitsTitle:'ما نعرفه. وما لا ندّعي معرفته.',limitsLead:'هذه تجربة تصميم وتفسير أخطاء، وليست منتجًا مباعًا أو مختبر أمان معتمدًا.',knownOne:'نتائج القواعد المضمّنة قابلة للتشغيل مرة أخرى.',knownTwo:'التجربة تعمل دون خادم أو حساب أو محفظة.',unknownOne:'لم يتم التحقق من تنفيذ خادم MCP أو التسوية المالية.',unknownTwo:'بصمة SHA-256 ليست توقيعًا ولا دليل ملكية.',footerNote:'نموذج Shadow مستقل · لم يُنشر على المتجر',
+    idle:'لم يُحلّل بعد',readyMessage:'جاهز للتشغيل محليًا.',changed:'تغيّر المدخل. شغّل التحليل لتحديث النتيجة.',running:'جارٍ التحقق محليًا…',completed:'اكتمل التحليل. النتائج محلية فقط؛ أثر الخادم UNKNOWN.',syntheticLoaded:'تم تحميل مثال اصطناعي؛ لا يوجد إصلاح تلقائي لخادم حقيقي.',cleared:'مُسح المدخل والنتائج من هذه الصفحة.',secretBlocked:'ظهرت كلمات قد تدل على بيانات حساسة؛ استخدم مدخلًا اصطناعيًا فقط.',tooLarge:'المدخل أكبر من 4096 بايت. اختصره.',cryptoUnavailable:'نجح التحقق المحلي لكن Web Crypto غير متاح؛ لم نولّد بصمة أو تقريرًا قابلاً للتنزيل.',noIssues:'لا مخالفات في هذه السياسة المحلية المحددة.',policyUnknown:'لا يوجد عقد معروف لتقييم هذا الإدخال.',confirmRequired:'أكد أن بياناتك اصطناعية كي تتمكن من تنزيل التقرير.',downloaded:'تم تنزيل التقرير المحلي غير الموقّع.',copied:'نُسخت بصمة المحتوى، وليست توقيعًا.',copyFailed:'تعذر النسخ تلقائيًا؛ يمكنك تحديد البصمة ونسخها يدويًا.',checksumReady:'البصمة المحلية جاهزة، ويمكن إعادة حسابها من محتوى التقرير.',rejectedInput:'تم رفض المدخل؛ راجع سبب الخطأ في النتائج.',fixNotice:'هذا مثال إصلاح ثابت لمحتوى اصطناعي؛ ليس اقتراحًا مضمونًا لأي نظام حقيقي.',localNoSchema:'لا مخطط مدعوم، فلا يصح الحكم على الاستدعاء.',
+    issues:{REQUIRED:'الحقل المطلوب غير موجود',TYPE_INTEGER:'القيمة ليست عددًا صحيحًا آمنًا',TYPE_STRING:'القيمة ليست نصًا',OUT_OF_RANGE:'العدد خارج الحدود المحددة',ENUM:'القيمة خارج القائمة المسموحة',MAX_LENGTH:'النص أطول من الحد المحدد',ADDITIONAL_FIELD:'حقل غير مسموح به',INVALID_JSON:'JSON غير صالح',DUPLICATE_KEY:'مفتاح مكرر؛ لا نتجاهله',EMPTY_INPUT:'المدخل فارغ',INPUT_TOO_LARGE:'المدخل طويل جدًا',ROOT_MUST_BE_OBJECT:'الجذر يجب أن يكون كائن JSON',JSON_SCAN_UNSUPPORTED:'تعذر تدقيق بنية JSON',NON_FINITE_NUMBER:'رقم غير قابل للتمثيل بدقة',INPUT_NOT_TEXT:'المدخل ليس نصيًا'},actions:{COERCED_DECIMAL_INTEGER:'حوّلت هذه السياسة النص الرقمي إلى عدد صحيح',DROPPED_UNKNOWN_FIELD:'تجاهلت هذه السياسة حقلًا زائدًا'}
+  },
+  en:{
+    skip:'Skip to demo',top:'Private concept lab · no server calls, payments or remote actions',navLab:'The lab',navMethod:'The method',navLimits:'Limits',eyebrow:'CHAPTER ONE / WHEN AN AGENT DISAGREES WITH THE CONTRACT',heroA:'The failure is invisible.',heroB:'Until it has a shape.',lead:'Watch an MCP tool call collide with its declared contract. Compare three explicit local policies, and see exactly where certainty ends.',primaryCta:'Run the demo',secondaryCta:'See the method',factOne:'Computed in your browser',factTwo:'Explicit hypothetical policies',factThree:'Remote system outcome',simulation:'Simulation',diagramCaption:'A visualization of contract drift—not fictional sales data.',labTag:'THE INTERACTIVE LAB',labHeading:'See the break. Inspect the fix.',labIntro:'Choose a synthetic sample and see what each local policy accepts and rejects. No server or wallet is contacted.',inputHeading:'The call versus the contract',inputIntro:'Fixed synthetic tool schema: create_invoice. Nothing you type is sent anywhere.',chooseExample:'Choose a synthetic scenario',preset1:'Missing field',preset2:'Policy disagreement',preset3:'Corrected call',preset4:'Duplicate-key trap',editInput:'Payload (editable)',inputWarning:'Use synthetic data only. Never paste credentials or customer data.',run:'Evaluate the call',fix:'Load example correction',clear:'Clear',ready:'Ready for a local run.',resultsTitle:'Where it drifts',resultsIntro:'Three named simulation policies, not a real server’s rules.',policyLabel:'Local policy simulations',strict:'Strict',coerce:'Numeric coercion',permissive:'Coerce + ignore extras',detailLabel:'Selected policy: rules & result',notRunYet:'Run the simulation to inspect precise rule violations here.',remoteTitle:'Real remote effect',remoteDesc:'No MCP server was called. Whether a real server would accept or execute is unknown.',receiptTitle:'Local test summary (unsigned)',traceOverline:'DECISION PATH · ONE POLICY',traceTitle:'See exactly what changed.',traceIdle:'Run the simulation to see each decision step.',tracePrivacy:'Only built-in synthetic examples show their values. Edited inputs never reveal their values in this trace.',traceFailure:'Rule failed',traceConversion:'Value converted',traceRemoval:'Field dropped',traceFinal:'Local verdict',traceNoAction:'No transformations under this local policy.',traceUnknown:'No supported contract; no local verdict.',traceLocalOnly:'This verdict is local only. The remote server outcome remains UNKNOWN.',confirmExport:'I confirm this is synthetic data with no secrets.',download:'Download local report',copy:'Copy digest',unsigned:'Unsigned local summary, not proof of delivery. Raw input is excluded by default.',methodTag:'THREE LEGIBLE MOMENTS',methodTitle:'Not magic. Inspectable rules.',methodIntro:'Make failure visually legible—and put limits of knowledge in plain sight.',stepOneTitle:'Declared contract',stepOneDesc:'The required field, type, allowed value and policy boundary are visible up front.',stepTwoTitle:'Visible collision',stepTwoDesc:'A shifted rail and a text explanation: missing field, wrong type or policy disagreement.',stepThreeTitle:'No false certainty',stepThreeDesc:'A local simulation can pass while real remote behavior remains UNKNOWN.',limitsTag:'TRUST BOUNDARIES',limitsTitle:'What we know. What we do not.',limitsLead:'A design and contract-simulation concept—not a sold product or certified security tool.',knownOne:'You can rerun the local rules and inspect their outputs.',knownTwo:'This demonstration needs no account, server or wallet.',unknownOne:'No real MCP execution or financial settlement was checked.',unknownTwo:'A SHA-256 digest is neither a signature nor proof of ownership.',footerNote:'Standalone Shadow concept · not deployed to the store',
+    idle:'NOT RUN',readyMessage:'Ready for a local run.',changed:'Input changed. Rerun the evaluation to update results.',running:'Evaluating locally…',completed:'Evaluation finished locally. Remote outcome remains UNKNOWN.',syntheticLoaded:'A synthetic example was loaded; no real server fix has been applied.',cleared:'Input and results cleared on this page.',secretBlocked:'Potentially sensitive material detected. Use a synthetic sample only.',tooLarge:'Input exceeds 4096 UTF-8 bytes.',cryptoUnavailable:'Local checks completed, but Web Crypto is unavailable; no SHA-256 or downloadable report was produced.',noIssues:'No violations under the selected local policy.',policyUnknown:'No supported contract is known, so no verdict can be issued.',confirmRequired:'Confirm the input is synthetic before downloading.',downloaded:'Unsigned local report downloaded.',copied:'Content digest copied—not a signature.',copyFailed:'Clipboard unavailable; select and copy the digest manually.',checksumReady:'Local digest ready. It can be recomputed from the report content.',rejectedInput:'Input rejected. See the rule error in the result panel.',fixNotice:'This loads a known synthetic correction—not a repair guarantee for your server.',localNoSchema:'No supported contract: no local verdict.',
+    issues:{REQUIRED:'Required field is missing',TYPE_INTEGER:'Not a safe integer',TYPE_STRING:'Expected text value',OUT_OF_RANGE:'Outside declared numeric range',ENUM:'Value outside allowed enum',MAX_LENGTH:'Text exceeds declared length',ADDITIONAL_FIELD:'Undeclared field is forbidden',INVALID_JSON:'Invalid JSON syntax',DUPLICATE_KEY:'Duplicate object key rejected',EMPTY_INPUT:'Input is empty',INPUT_TOO_LARGE:'Input is too large',ROOT_MUST_BE_OBJECT:'Root must be a JSON object',JSON_SCAN_UNSUPPORTED:'JSON structure cannot be safely checked',NON_FINITE_NUMBER:'Non-finite number cannot be represented',INPUT_NOT_TEXT:'Input is not text'},actions:{COERCED_DECIMAL_INTEGER:'Numeric text coerced to integer under this policy',DROPPED_UNKNOWN_FIELD:'Extra field discarded under this policy'}
+  }
+};
+const $=id=>document.getElementById(id);
+const nodes={traceSteps:$('traceSteps'),lang:$('langToggle'),langText:$('langToggleText'),payload:$('payload'),bytes:$('byteLabel'),formStatus:$('formStatus'),presets:$('presets'),run:$('runBtn'),fix:$('fixBtn'),clear:$('clearBtn'),issues:$('issues'),hash:$('hashValue'),diagram:$('diagram'),figure:$('figureState'),artState:$('artState'),localVerdict:$('localVerdict'),policyList:$('policyList'),detailPolicy:$('detailPolicy'),confirm:$('syntheticConfirm'),download:$('downloadBtn'),copy:$('copyBtn')};
+let lang='ar',activePreset='mismatch',selectedPolicy='strict',lastReport=null,lastResults=null,running=false,runSerial=0;
+const t=()=>translations[lang];
+const setText=(el,value)=>{el.textContent=String(value)};
+const status=(key)=>setText(nodes.formStatus,t()[key]||key);
+function switchLanguage(next){
+  lang=next==='ar'?'ar':'en';document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  nodes.langText.textContent=lang==='ar'?'EN':'عربي';nodes.lang.setAttribute('aria-label',lang==='ar'?'EN — Switch to English':'عربي — التبديل إلى العربية');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const value=t()[el.dataset.i18n];if(typeof value==='string')el.textContent=value});
+  if(lastResults)renderResults(lastResults);else renderEmpty();
+  updateBytes();updateButtons();
+}
+function updateBytes(){const n=D.byteCount(nodes.payload.value);setText(nodes.bytes,`${n} / ${D.MAX_BYTES} BYTES`);nodes.bytes.style.color=n>D.MAX_BYTES?'#ffb5a1':''}
+function resetResults(changedMessage='changed'){
+  runSerial++;lastReport=null;lastResults=null;
+  nodes.confirm.checked=false;nodes.hash.textContent='— NO LOCAL REPORT YET —';
+  nodes.diagram.dataset.state='idle';setText(nodes.figure,'IDLE');setText(nodes.artState,'AWAITING INPUT');
+  renderEmpty();status(changedMessage);updateButtons();
+}
+function renderEmpty(){
+  nodes.localVerdict.dataset.verdict='idle';nodes.localVerdict.textContent=lang==='ar'?'لم يُحلّل':'NOT RUN';
+  for(const p of D.POLICIES){const el=$('policy-'+p.id);el.dataset.verdict='idle';el.textContent='—'}
+  nodes.issues.replaceChildren();const p=document.createElement('p');p.className='empty';p.textContent=t().notRunYet;nodes.issues.append(p);
+  nodes.detailPolicy.textContent=selectedPolicy.toUpperCase();renderDecisionTrace(null);
+}
+function choosePreset(id){
+  if(!Object.prototype.hasOwnProperty.call(D.PRESETS,id))return;
+  activePreset=id;nodes.payload.value=D.PRESETS[id].text;
+  document.querySelectorAll('[data-preset]').forEach(b=>{const is=b.dataset.preset===id;b.classList.toggle('active',is);b.setAttribute('aria-pressed',String(is))});
+  updateBytes();resetResults('syntheticLoaded');
+}
+function issueElement(code,field,detail,type='error'){
+  const el=document.createElement('div');el.className='issue-item '+(type==='success'?'good':type==='note'?'note':'');
+  const chip=document.createElement('span');chip.className='issue-bullet';chip.textContent=type==='success'?'✓':type==='note'?'~':'!';
+  const label=document.createElement('span');
+  const bold=document.createElement('b');bold.className='field';bold.dir='ltr';bold.textContent=field||'$';
+  const message=(type==='note'?t().actions[code]:t().issues[code]) || detail || code;
+  label.append(bold,document.createTextNode(' · '+message));
+  el.append(chip,label);return el;
+}
+function renderDecisionTrace(policy){
+  const list=nodes.traceSteps;
+  list.replaceChildren();
+  if(!policy){const line=document.createElement('li');line.className='trace-empty';line.textContent=t().traceIdle;list.append(line);return}
+  const isFixture=activePreset && Object.prototype.hasOwnProperty.call(D.PRESETS,activePreset)&&
+    nodes.payload.value===D.PRESETS[activePreset].text;
+  function add(kind,title,detail){
+    const el=document.createElement('li');el.className='trace-step trace-'+kind;
+    const marker=document.createElement('span');marker.className='trace-marker';marker.textContent=kind==='fail'?'!':kind==='pass'?'✓':kind==='unknown'?'?':'↳';marker.setAttribute('aria-hidden','true');
+    const main=document.createElement('div');main.className='trace-step-body';
+    const heading=document.createElement('strong');heading.textContent=title;
+    const msg=document.createElement('span');msg.textContent=detail;
+    main.append(heading,msg);el.append(marker,main);list.append(el);
+  }
+  if(policy.reason){add('unknown',t().traceUnknown,policy.reason);return}
+  for(const a of policy.actions){
+    const field= D.CONTRACT.fields.some(f=>f.name===a.field) ? a.field : (isFixture?a.field:'[other field]');
+    if(a.code==='COERCED_DECIMAL_INTEGER'){
+      add('change',t().traceConversion+' · '+field,
+        isFixture?JSON.stringify(a.from)+'  →  '+JSON.stringify(a.to):(lang==='ar'?'نص عددي → عدد صحيح (القيمة مخفية)':'Numeric text → integer (value hidden)'));
+    }else if(a.code==='DROPPED_UNKNOWN_FIELD'){
+      add('change',t().traceRemoval, isFixture?field:(lang==='ar'?'اسم الحقل مخفي':'Field name hidden'));
+    }
+  }
+  for(const issue of policy.issues.slice(0,4)){
+    const field=D.CONTRACT.fields.some(f=>f.name===issue.field)||issue.field==='$'?issue.field:(isFixture?issue.field:'[other field]');
+    add('fail',t().traceFailure+' · '+field,t().issues[issue.code]||issue.code);
+  }
+  if(policy.actions.length===0&&policy.issues.length===0){add('pass',t().traceNoAction,lang==='ar'?'الاستدعاء يوافق القواعد المحلية المعلنة.':'The call matches the stated local rules.');}
+  add(policy.verdict==='PASS'?'pass':policy.verdict==='UNKNOWN'?'unknown':'fail',t().traceFinal+' · '+policy.verdict,t().traceLocalOnly);
+}
+function renderPolicyDetails(){
+  nodes.issues.replaceChildren();nodes.detailPolicy.textContent=selectedPolicy.toUpperCase();
+  if(!lastResults){const p=document.createElement('p');p.className='empty';p.textContent=t().notRunYet;nodes.issues.append(p);renderDecisionTrace(null);return}
+  const p=lastResults.policies.find(p=>p.policy===selectedPolicy);
+  if(p.reason){const n=document.createElement('p');n.className='empty';n.textContent=t().policyUnknown;nodes.issues.append(n);renderDecisionTrace(p);return}
+  // V1.1.1 privacy fix: the detailed policy panel now obeys the SAME rule as
+  // the decision trace and the default exported report. Only built-in, byte-exact
+  // fixtures may display their example field names and values; custom input
+  // remains editable locally but is not echoed outside the textarea.
+  const isFixture=activePreset && Object.prototype.hasOwnProperty.call(D.PRESETS,activePreset) &&
+    nodes.payload.value===D.PRESETS[activePreset].text;
+  const knownField = field => D.CONTRACT.fields.some(f=>f.name===field) || field==='$';
+  const safeField = field => (knownField(field) || isFixture) ? field : '[unrecognized field]';
+  if(p.issues.length===0){nodes.issues.append(issueElement('OK','$',t().noIssues,'success'))}
+  else p.issues.forEach(issue=>nodes.issues.append(issueElement(issue.code,safeField(issue.field),issue.expected)));
+  p.actions.forEach(a=>{
+    const line=issueElement(a.code,safeField(a.field),'','note');
+    if(a.code==='COERCED_DECIMAL_INTEGER'){
+      const description = isFixture ? ' · '+JSON.stringify(a.from)+' → '+JSON.stringify(a.to)
+        : (lang==='ar'?' · نص عددي → عدد صحيح (القيمة مخفية)':' · Numeric text → integer (value hidden)');
+      line.lastChild.append(document.createTextNode(description));
+    }
+    if(a.code==='DROPPED_UNKNOWN_FIELD')line.lastChild.append(document.createTextNode(lang==='ar'?' · أزيل من النسخة المحلية':' · removed from the local copy'));
+    nodes.issues.append(line);
+  });
+  renderDecisionTrace(p);
+}
+function renderResults(result){
+  nodes.localVerdict.textContent=result.localVerdict;nodes.localVerdict.dataset.verdict=result.localVerdict;
+  let scene=result.localVerdict==='FAIL'?'fail':result.localVerdict==='PASS'?'pass':result.localVerdict==='DIVERGENT'?'divergent':'idle';
+  nodes.diagram.dataset.state=scene;nodes.figure.textContent=result.localVerdict;nodes.artState.textContent=result.localVerdict+' / REMOTE UNKNOWN';
+  for(const p of result.policies){const el=$('policy-'+p.policy);el.dataset.verdict=p.verdict;el.textContent=p.verdict}
+  renderPolicyDetails();
+}
+function updateButtons(){
+  const safe=lastReport&&!D.containsPossibleSecret(nodes.payload.value)&&nodes.confirm.checked&&!running;
+  nodes.download.disabled=!safe;nodes.copy.disabled=!safe;
+  nodes.run.disabled=running;
+}
+async function evaluateNow(){
+  if(running)return;
+  const raw=nodes.payload.value;const n=D.byteCount(raw);
+  if(n>D.MAX_BYTES){resetResults('tooLarge');return}
+  if(D.containsPossibleSecret(raw)){resetResults('secretBlocked');return}
+  running=true;runSerial++;const ticket=runSerial;updateButtons();status('running');
+  const outcome=D.compare(raw);lastResults=outcome;renderResults(outcome);
+  if(D.parseSample(raw).ok===false)status('rejectedInput');
+  try{
+    const report=await D.exportReport(raw,{fixtureId:activePreset});
+    if(ticket!==runSerial)return;
+    lastReport=report;
+    nodes.hash.textContent=report.content_sha256;
+    if(D.parseSample(raw).ok)status('completed');
+    else status('rejectedInput');
+  }catch(err){
+    if(ticket!==runSerial)return;
+    lastReport=null;nodes.hash.textContent='SHA-256 UNAVAILABLE';status('cryptoUnavailable');
+  }finally{running=false;updateButtons()}
+}
+function selectPolicy(id){if(!D.POLICIES.some(p=>p.id===id))return;selectedPolicy=id;nodes.policyList.querySelectorAll('[data-policy]').forEach(b=>{const val=b.dataset.policy===id;b.classList.toggle('selected',val);b.setAttribute('aria-pressed',String(val))});renderPolicyDetails()}
+function download(){if(!lastReport||!nodes.confirm.checked)return status('confirmRequired');const json=JSON.stringify(lastReport,null,2)+'\n';const blob=new Blob([json],{type:'application/json;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='naif-drift-'+lastReport.content_sha256.slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2000);status('downloaded')}
+async function copyHash(){if(!lastReport||!nodes.confirm.checked)return status('confirmRequired');try{await navigator.clipboard.writeText(lastReport.content_sha256);status('copied')}catch{try{const p=document.createElement('textarea');p.value=lastReport.content_sha256;p.style.position='fixed';p.style.left='-99999px';document.body.appendChild(p);p.select();const ok=document.execCommand('copy');p.remove();status(ok?'copied':'copyFailed')}catch{status('copyFailed')}}}
+nodes.lang.addEventListener('click',()=>switchLanguage(lang==='ar'?'en':'ar'));
+nodes.presets.addEventListener('click',ev=>{const p=ev.target.closest('[data-preset]');if(p)choosePreset(p.dataset.preset)});
+nodes.payload.addEventListener('input',()=>{activePreset=null;document.querySelectorAll('[data-preset]').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});updateBytes();resetResults()});
+nodes.run.addEventListener('click',evaluateNow);
+nodes.fix.addEventListener('click',()=>{choosePreset('corrected');status('fixNotice')});
+nodes.clear.addEventListener('click',()=>{nodes.payload.value='';activePreset=null;document.querySelectorAll('[data-preset]').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});updateBytes();resetResults('cleared')});
+nodes.policyList.addEventListener('click',ev=>{const b=ev.target.closest('[data-policy]');if(b)selectPolicy(b.dataset.policy)});
+nodes.confirm.addEventListener('change',updateButtons);
+nodes.download.addEventListener('click',download);nodes.copy.addEventListener('click',copyHash);
+nodes.payload.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='Enter'){e.preventDefault();evaluateNow()}});
+choosePreset('mismatch');switchLanguage('ar');
+window.NAIFDriftUI={run:evaluateNow,loadPreset:choosePreset,setLang:switchLanguage,selectPolicy,getState:()=>({lang,activePreset,selectedPolicy,lastResults,lastReport,running}),getReport:()=>lastReport};
+})();
+
+</script>
+
+<script id="naif-device-qa-script">
+// Optional self-check on the same physical browser, no fetch, storage, telemetry or account data.
+(function(){'use strict';
+const $=id=>document.getElementById(id);
+const ids=['qaPhysical','qaVoiceOver','qaDownload','qaRotation'];
+const state={runs:0,results:null,durationMs:null,runEnvironment:null};
+function environmentSnapshot(){
+ return {executed_at_utc:new Date().toISOString(),language:document.documentElement.lang,
+ viewport_css_px:{width:document.documentElement.clientWidth,height:document.documentElement.clientHeight},
+ context:{isIOSLike:/iP(hone|ad|od)/.test(navigator.userAgent),
+ isSafariLike:/Safari/.test(navigator.userAgent)&&!/Chrome|Chromium|CriOS|Firefox|FxiOS|Edg|OPR|Android/.test(navigator.userAgent),
+ touchCapable:navigator.maxTouchPoints>0,secureContext:Boolean(window.isSecureContext),
+ webCryptoSubtle:Boolean(window.crypto?.subtle),reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches}};
+}
+function visibleLang(){return document.documentElement.lang==='en'?'en':'ar'}
+const labels={
+  engine:'Drift Lens engine is loaded',ui:'UI hooks are available',mismatch:'Mismatch gives FAIL',
+  divergence:'Illustrative policies diverge',corrected:'Corrected fixture gives PASS',
+  duplicate:'Unicode-escaped duplicate key is rejected',unknown:'No schema returns UNKNOWN',
+  remote:'Remote execution remains UNKNOWN',secret:'Suspicious secret hint detected locally',
+  custom:'Custom input stays out of local summary',checksum:'SHA-256 matches reference',
+  integrity:'Downloaded summary checksum can be recalculated',disclaimer:'The report does not claim delivery',
+  noNetwork:'No external script, stylesheet or pending resource is needed',
+  layout:'No horizontal overflow on this viewport',language:'Arabic and English labels exist',
+  inputFont:'JSON input font avoids mobile focus zoom',touchTargets:'Primary buttons have touch-sized targets',
+  exportApi:'Local browser can create a Blob download',reduced:'Reduced-motion is supported in CSS'
+};
+const labelsArabic={
+  engine:'محرك Drift Lens محمّل',ui:'عناصر الواجهة متاحة',mismatch:'المدخل المخالف يعطي FAIL',
+  divergence:'السياسات التوضيحية تعطي أحكامًا مختلفة',corrected:'المثال المصحح يعطي PASS',
+  duplicate:'المفتاح المكرر مع Unicode مرفوض',unknown:'غياب العقد يعطي UNKNOWN',
+  remote:'نتيجة التنفيذ البعيد تبقى UNKNOWN',secret:'اكتشاف مؤشر بيانات حساسة داخل الاختبار',
+  custom:'المدخل المخصص لا يظهر في الملخص',checksum:'SHA-256 تطابق القيمة المرجعية',
+  integrity:'يمكن إعادة حساب بصمة التقرير',disclaimer:'التقرير لا يدعي تسليم خدمة',
+  noNetwork:'الاختبار لا يعتمد على موارد خارجية',layout:'لا يوجد تمرير أفقي زائد',
+  language:'النصوص العربية والإنجليزية متاحة',inputFont:'خط JSON مناسب للجوال',
+  touchTargets:'الأزرار الأساسية مناسبة للمس',exportApi:'المتصفح يدعم تنزيل تقرير محلي',
+  reduced:'دعم تفضيل تقليل الحركة موجود'
+};
+function record(list,key,ok,explanation){list.push({id:key,ok:Boolean(ok),explanation:explanation||''})}
+function display(results){
+ const ol=$('deviceResults');ol.replaceChildren();
+ results.forEach(x=>{
+  const li=document.createElement('li');li.className='device-check';
+  const title=document.createElement('span');title.textContent=(visibleLang()==='ar'?labelsArabic:labels)[x.id]||x.id;
+  const badge=document.createElement('b');badge.textContent=x.ok?'PASS':'REVIEW';badge.dataset.kind=x.ok?'pass':'fail';
+  li.append(title,badge);ol.append(li);
+ });
+ const passed=results.filter(x=>x.ok).length;
+ const en=visibleLang()==='en';
+ $('deviceStatus').textContent=(en?'Browser checks: ':'فحوص المتصفح: ')+passed+'/'+results.length+
+   (en?' passed. Physical iPhone / VoiceOver require manual confirmation.':' ناجحة. الآيفون الفعلي وVoiceOver يحتاجان تحققًا يدويًا.');
+}
+async function selfTest(){
+ const btn=$('deviceRun');if(btn.disabled)return;
+ btn.disabled=true;$('deviceStatus').textContent=visibleLang()==='en'?'Running locally…':'جارٍ الفحص داخل هذا المتصفح…';
+ const list=[],start=performance.now(),D=window.NAIFDrift,UI=window.NAIFDriftUI;
+ const runEnvironment=environmentSnapshot();
+ const test=async(name,fn)=>{try{record(list,name,await fn())}catch(err){record(list,name,false,err?.name||'error')}};
+ await test('engine',()=>D&&D.CONTRACT?.id==='create_invoice'&&D.PRESETS?.policy);
+ await test('ui',()=>!!UI?.getReport&&!!UI?.loadPreset);
+ await test('mismatch',()=>D.compare(D.PRESETS.mismatch.text).localVerdict==='FAIL');
+ await test('divergence',()=>{
+  const v=D.compare(D.PRESETS.policy.text);
+  return v.localVerdict==='DIVERGENT'&&v.policies[0].verdict==='FAIL'&&v.policies[2].verdict==='PASS';
+ });
+ await test('corrected',()=>D.compare(D.PRESETS.corrected.text).localVerdict==='PASS');
+ await test('duplicate',()=>D.parseSample('{"amount_cents":1,"\\u0061mount_cents":2,"currency":"USD"}').code==='DUPLICATE_KEY');
+ await test('unknown',()=>D.compare(D.PRESETS.corrected.text,{schemaKnown:false}).localVerdict==='UNKNOWN');
+ await test('remote',()=>D.compare(D.PRESETS.corrected.text).remote.verdict==='UNKNOWN');
+ await test('secret',()=>D.containsPossibleSecret('{"api_key":"SYNTHETIC_ONLY"}')===true);
+ await test('custom',async()=>{
+  const p=await D.exportReport('{"amount_cents":900,"currency":"USD","X_MARKER_LOCAL_QA":"ONLY_SYNTHETIC"}');
+  const t=JSON.stringify(p);return p.input===null&&p.input_source_text===null&&p.input_sha256===null&&
+    !t.includes('ONLY_SYNTHETIC')&&!t.includes('X_MARKER_LOCAL_QA');
+ });
+ await test('checksum',async()=>await D.sha256('abc')==='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad');
+ await test('integrity',async()=>{
+  const report=await D.exportReport(D.PRESETS.corrected.text,{fixtureId:'corrected'});
+  const clean={...report};delete clean.content_sha256;
+  return await D.sha256(D.stableStringify(clean))===report.content_sha256;
+ });
+ await test('disclaimer',()=>{const s=$('device-gate').textContent+' '+document.querySelector('.disclaimer')?.textContent;
+  return /تسليم|delivery/.test(s)&&/غير موقّع|Unsigned|غير موقعة|not proof/i.test(s);
+ });
+ await test('noNetwork',()=>document.querySelectorAll('script[src],link[rel="stylesheet"]').length===0 &&
+    document.querySelector('meta[http-equiv="Content-Security-Policy"]')?.content.includes("connect-src 'none'"));
+ await test('layout',()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1);
+ await test('language',()=>document.querySelector('.qa-ar')&&document.querySelector('.qa-en')&&
+  ['ar','en'].includes(document.documentElement.lang));
+ await test('inputFont',()=>{
+  const px=parseFloat(getComputedStyle($('payload')).fontSize);
+  return document.documentElement.clientWidth>600||px>=16;
+ });
+ await test('touchTargets',()=>['deviceRun','langToggle','runBtn'].every(id=>$(id).getBoundingClientRect().height>=43));
+ await test('exportApi',()=>typeof Blob==='function'&&typeof URL.createObjectURL==='function'&&
+  typeof HTMLAnchorElement!=='undefined'&&'download' in HTMLAnchorElement.prototype);
+ await test('reduced',()=>Array.from(document.styleSheets).some(s=>{try{return Array.from(s.cssRules).some(r=>
+  r.conditionText?.includes('prefers-reduced-motion'))}catch{return false}}));
+ state.runs++;state.results=list;state.durationMs=Math.round(performance.now()-start);state.runEnvironment=runEnvironment;
+ display(list);$('deviceExport').disabled=false;btn.disabled=false;
+}
+function downloadQA(){
+ if(!state.results)return;
+ const manual=Object.fromEntries(ids.map(id=>[id,Boolean($(id).checked)]));
+ const passed=state.results.filter(x=>x.ok).length;
+ const report={
+  report_kind:'NAIF_DRIFT_LENS_ON_DEVICE_SELF_CHECK_NOT_ATTESTED',
+  demo_version:document.documentElement.dataset.app,
+  source:'user-initiated browser check, no external attestation',
+  generated_at_utc:new Date().toISOString(),
+  executed_at_utc:state.runEnvironment.executed_at_utc,
+  language_at_run:state.runEnvironment.language,
+  viewport_css_px:state.runEnvironment.viewport_css_px,
+  export_viewport_css_px:{width:document.documentElement.clientWidth,height:document.documentElement.clientHeight},
+  context:state.runEnvironment.context,
+  automated:{passed,total:state.results.length,results:state.results.map(x=>({id:x.id,ok:x.ok})),duration_ms:state.durationMs},
+  manual_user_attestations:manual,
+  manual_checks_not_independently_verified:true,
+  physical_iPhone_Safari_voiceover_gate:passed===state.results.length&&manual.qaPhysical&&manual.qaVoiceOver&&manual.qaDownload&&manual.qaRotation?'SELF_REPORTED_COMPLETE__NOT_INDEPENDENTLY_VERIFIED':'INCOMPLETE',
+  independent_five_user_test:'NOT_VERIFIED',
+  production_release_approval:false,
+  raw_payload_exported:false,
+  statement:'No identity, signature, IP, raw input, customer data, payment, or remote MCP operation is attested.'
+ };
+ const blob=new Blob([JSON.stringify(report,null,2)+'\n'],{type:'application/json'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='NAIF_Drift_Lens_Device_QA.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2500);
+}
+new MutationObserver(()=>{if(state.results)display(state.results)}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+$('deviceRun').addEventListener('click',selfTest);
+$('deviceExport').addEventListener('click',downloadQA);
+})();
+</script>
+</body></html>
